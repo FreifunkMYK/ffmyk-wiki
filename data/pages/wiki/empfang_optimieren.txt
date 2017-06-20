@@ -1,0 +1,27 @@
+====== Empfang optimieren ======
+Beim aufstellen eines neuen Freifunk-Routers möchte man natürlich für einen Optimalen Empfang sorgen. Entweder soll der Router Verbindung zu einem anderen Freifunk-Router (Router - Router) aufbauen oder es geht darum den Router so aus zu richten das man in einem bestimmten Bereich einen guten empfang hat (Router - Client). Je nach Problem gibt es natürlich verschiedene Lösungsansäte die im Folgenden aufgezeigt werden. 
+
+===== Router - Router Verbindung =====
+
+==== Script ====
+Um die Empfangsleistung auf einem [[hardware:TP-Link TL-WR841N|TP-Link TL-WR841]] zu überwachen stehen einem sehr wenig Speicher zur Verfügung. Oder auch für die schnelle, einfache Überprüfung könnt ihr dieses Script auf eurem Freifunkrouter ablegen und ausführbar machen.
+
+Hierzu verbindest du dich mittels [[SSH]] zu dem Router dessen Empfang überprüft werden soll und erstellst mittels ''vi check.sh'' eine neue Datei. Durch das drücken von ''i'' kannst du den folgende Zeilen einfügen:
+<code>#!/bin/ash
+while [ true ]; do
+        clear
+        iw mesh0 station dump | grep -E 'signal|Station'
+        sleep 1
+done</code>
+Mit der ''ESC''-Taste kommst du aus dem Bearbeitungsmodus heraus, danach speicherst und schließt du die Datei mittels '':wq''. Nun muss das Script nur noch ausführbar gemacht werden, dies geschieht mithilfe von ''chmod +x check.sh''. Jetzt ist das Script einsatzbereit und kann mittels ''./check.sh'' gestartet und mithilfe von ''Strg'' + ''c'' geschlossen werden.
+
+=== Auswertung ===
+Das Script zeigt die Signalstärke der Verbindung zum Entfernten Router in dB an. Ein guter Wert ist alles <70dB alles was >80dB liegt ist zu schwach und wird aufgrund von schwankungen häufiger zusammenbrechen.
+===== Router - Client Verbindung =====
+
+==== App ====
+  * Wifi Analyzer (Android)
+
+
+
+{{tag>HowTo Einstieg Software}}

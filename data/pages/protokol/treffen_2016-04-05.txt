@@ -1,0 +1,9 @@
+====== Treffen 2016-04-05 ======
+
+Lockere runde ohne feste Themen
+
+- Hackathon neue Webseite / Gateway-API / ...
+- Erweiterte Knotenstatistiken (http://10.222.42.54:3000)
+
+
+{{tag>Protokoll}}

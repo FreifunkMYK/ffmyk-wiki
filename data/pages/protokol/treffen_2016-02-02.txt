@@ -1,0 +1,84 @@
+====== Treffen 2016-02-02 ======
+
+  * Protokoll: folgt (schreiber Sebastian)
+
+====== Themen: ======
+
+  - Vorstellungsrunde
+  - Protokollschreiber Bestimmen! <--- Sebastian
+  - Tag der offenen Tür
+  - Oberwesel Freifunkprojekt
+  - Firmware SSID
+  - Technikfragen
+  - Technisches Backend
+
+====== Anwesend: ======
+
+  * Ansgar
+  * Florian
+  * Niklas
+  * Christoph 2x
+  * Franziskus (Planung Oberwesel)
+  * Michael (Sinzig - Tag der Offenentür)
+  * Björn
+  * Elias
+
+====== Tag der offenen Tür 13.02.16 (09:00-13:00) (=nächste Woche Samstag) ======
+
+  * Berufsbildende Schule Ahrweiler veranstaltet einen Tag der Offenen Tür (ca. 2500 Schüler).
+  * Netzbereitstellung ist schon abgeklärt. 100Mbit/s Kabel anschluss.
+  * Es soll auch ein Stand zur Information über Freifunk eingerichtet werden. 
+  * Es werden noch Helfer für den Samstag gesucht!
+  * Material
+    * Derzeit stehen 3x WDR841N zur Verfügung.
+    * Uni: Div. 841er & CPE+1043er zum anschauen
+    * Adlerweb: Offloader
+  * Freitag Aufbau 12.02. ab 14 Uhr:
+    * Sebastian hilft Freitag bei Aufbau.
+  * Samstag Standbetreuung ab ~08:30
+    * Adlerweb schaut nach - je nach Arbeit
+
+====== Tag der offenen Tür Mai (Freitag, 20.05.2015) ======
+
+  * Kreisverwaltung Ahrweiler
+  * Geräte werden beschafft und sollen dauerhaft dort stehen bleiben
+
+====== Oberwesel Freifunkprojekt ======
+
+  * Qualitätsiniziative, unabhängig vom Gewerbeverein, zur Verbesserung.
+  * Oberwesel hat das Ziel "Qualitätsstadt" werden und hat dafür ein mehrere Punkteplan erstellt. 
+  * Ein großes Manko für die vielen Touristen ist derzeit das fehlen von freien Internetzugängen. 
+  * Man möchte auf Insellösungen verzichten, daher ist man auf Freifunk gekommen.
+  * Qualitätststadt (kleinste Qualitätsstadt Deutschlands) seit November 2015. 
+  * 16 Unternehmen sind bereit sich am Projekt Freifunk zu beteiligen. 
+  * Bis September wäre es schön einige Router hängen zu haben.
+
+====== Firmware SSID ======
+
+    * Bezug zur Ortschaft durch SSID. 
+    * Ansgar bietet sich an mal in Lua rein zu schauen um die SSID's ein zu tragen. (config mode)
+    * Nur eine Auswahlbox, auswahl die durch die Community bestimmt wird
+    * SSID am Kreis ausrichten nicht an Ortschaften
+
+====== Technisches Backend ======
+  * Alte und neue Datenbank gemeinsam.
+  * Router mit E-Mail Adresse verknüpft übertragen.
+  * E-Mail Verifizierung
+
+====== Technische Fragen ======
+  * Glossar
+  * Liste der verfügbaren Modelle muss überarbeitet werden.
+
+===== Fragen =====
+
+  * Keine Daten in der Knotenregistrierung
+    * Kann passieren wenn Karte Probleme hat, Details sind technisch nicht relevant
+    * Statusanzeige auf Webseite (Cachet) 
+  * Liste der verfügbaren Modelle überarbeiten / Abgleich mit OpenWRT-Wiki
+    * Kompatibilitätsliste freifunk.net
+    * https://wiki.freifunk.net/Freifunk_Firmware_Gluon/Hardware
+    * Zeigt nur die aktuell als Stable generierten Router
+  * TP-Link Archer C5/C7?
+    * Nightly verfügbar, letzter Stand: 5GHz-Mesh machte Probleme. Einer in Andernach online 
+  * Wiki: Link zur Karte defekt
+{{tag>Protokoll}}

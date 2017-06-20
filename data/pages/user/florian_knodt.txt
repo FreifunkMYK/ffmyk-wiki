@@ -1,0 +1,14 @@
+====== Florian knodt ======
+
+  * Saffig
+  * Beruflich: Netzwerk- und Systemadministration
+  * Privat: [[http://www.adlerweb.info|Elektronik, Linux]]
+
+==== Meine Aufgaben in der Community ====
+
+  * Betreibt fastd1 & die Statusseiten
+  * Braut die Firmware
+  * Hat in jeder Ecke einen Router stehen
+  * Schreibt seltsame Codefragmente
+
+{{tag>User}}

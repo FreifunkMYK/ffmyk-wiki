@@ -1,0 +1,55 @@
+====== Ips ======
+
+==== IPv4 ====
+
+Derzeit läuft das gesamte Netz primär über IPv4. Intern steht uns das Netz 10.222.0.0/16 zur Verfügung. Zur Zeit sind folgende Bereiche in Verwendung:
+
+  
+  * 10.222.0.0/23 Statische IPs für Dienste
+  * 10.222.39.0/24 Local Offloader FBS (Ansprechpartner: adlerweb)
+  * 10.222.40.0/23 Local Offloader FBA (Ansprechpartner: adlerweb)
+  * 10.222.42.0/24 Testnetz (Ansprechpartner: adlerweb)
+  * 10.222.100.0/23 fastd1
+    * 10.222.100.1 -> fastd1
+    * 10.222.100.50 - 10.222.101.250 -> Clients fastd1
+  * 10.222.112.0/23 fastd2
+    * 10.222.112.1 -> fastd2
+    * 10.222.112.50 - 10.222.113.250 -> Clients fastd2
+  * 10.222.120.0/23 fastd3
+    * 10.222.120.1 -> fastd3
+    * 10.222.120.20 - 10.222.120.253 -> Clients fastd3
+  * 10.222.128.0/21 fastd4
+    * 10.222.128.1 -> fastd4
+    * 10.222.128.50 - 10.222.135.250 -> Clients fastd4
+  * 10.222.136.0/23 fastd5
+    * 10.222.136.1 -> fastd5
+    * 10.222.136.50 - 10.222.137.250 -> Clients fastd5
+  * 10.222.144.0/23 fastd6
+    * 10.222.144.1 -> fastd6
+    * 10.222.144.50 - 10.222.145.250 -> Clients fastd6
+  * 10.222.152.0/21 fastd7
+    * 10.222.152.1 -> fastd7
+    * 10.222.152.50 - 10.222.159.250 -> Clients fastd7
+  * 10.222.160.0/21 fastd8
+    * 10.222.160.1 -> fastd8
+    * 10.222.160.50 - 10.222.167.250 -> Clients fastd8
+  * 10.222.168.0/21 fastd9
+    * 10.222.168.1 -> fastd9
+    * 10.222.168.50 - 10.222.175.250 -> Clients fastd9
+==== IPv6 ====
+
+Derzeit sind wir nicht im Besitz eines öffentlichen IPv6-Netzes. Um interne Dienste, welche ausschließlich per v6 funktionieren, nutzen zu können ist derzeit folgender Bereich in Verwendung:
+
+  * 2a01:198:70a:ff::/64
+
+Das Netz gehört zu adlerweb und wir **NICHT** ins Internet weitergeleitet!
+
+Verwendet werden folgende festen IPs:
+
+  * 2a01:198:70a:ff::100:1 -> fastd1
+  * 2a01:198:70a:ff::70:1 -> fastd2
+  * 2a01:198:70a:ff::78:1 -> fastd3
+  * 2a01:198:70a:ff::128:1 -> fastd4
+  * 2a01:198:70a:ff::88:1 -> fastd5
+  * 2a01:198:70a:ff::160:1 -> fastd8
+  * 2a01:198:70a:ff::FFFE -> Immer der nächste erreichbare Knoten (also meist der, zu dem man verbunden ist)

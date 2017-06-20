@@ -1,0 +1,4 @@
+====== Alphaphase der ersten Firmware ======
+Das erste Firmwarepaket ist fertig und ein Knoten erstellt. Mit erfolg konnte der erste Ping durch das Netzwerk gejagt werden. Wir freuen uns auf weitere Updates.
+
+{{tag>Changelog}}

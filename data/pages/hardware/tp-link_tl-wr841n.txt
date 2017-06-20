@@ -1,0 +1,39 @@
+======TP-Link WR841N(D) ======
+
+===== Wichtiger Hinweis =====
+{{:wiki:update.jpg?100 |}}
+**Routermodell wird nur noch eingeschränkt unterstützt.**
+Die aktuell verkaufte Version 13 verfügt über einen neuen, ungetesteten Chipsatz. Außerdem ist momentan ab Version 12 nur ungetestete Nightly-Firmware für den Router verfügbar. Da der geringe Arbeitsspeicher des Routers auf längere Sicht nicht mehr ausreichen wird, suchen wir derzeit ein Nachfolgemodell mit ähnlichen Eigenschaften (günstig+Reichweite)
+
+======Hardware-Eigenschaften======
+
+Das Gerät einer der Freifunk Einsteiger Geräte und (fast) Baugleich mit dem WR841N, dieser hat nur keine Abnehmbaren Antennen.
+  * einer Atheros AR9xx CPU mit  400-530MHz (je nach Version)
+  * 32 MB RAM
+  * 4 MB Flash-Speicher
+  * Atheros AR9287-BL1A 2.4ghz 802.11bgn (je nach Version)
+  * zwei abschraubbaren 3dBi Rundstrahl-Antennen (SMA-RP Stecker) (Nicht abschraubbar beim WR841N !)
+  * integriertem 4-Port AR9341 FastEthernet Switch
+  * einem WAN-Port
+
+===== Freifunk Firmware auf dem TP-Link WR841ND =====
+Den TP-Link WR841N/WR841ND gibt es inzwischen in diversen Revisionen bis v9 (Stand Dez. 2014), die sich technisch teilweise unterscheiden. Viele Communities nutzen [[wiki:Freifunk_Firmware_Gluon|Gluon]], das meist auf Routern von v3 bis v9 unterstützt wird.
+
+==== Installation der Freifunk-Firmware ====
+Zur Installation geben die Communities meist selber Auskunft, da der Ablauf jedes mal etwas anders sein kann, speziell wenn kein [[wiki:Freifunk_Firmware_Gluon|Gluon]] verwendet wird.
+
+===== Siehe auch =====
+  * [[wiki:Access Point|Access Points]]
+  * [[wiki:OpenWrt]] - die Distribution, auf der die Freifunk-Firmware aufsetzt
+  * [[wiki:Freifunk Firmware]]
+  * [[wiki:Freifunk-Linux auf dem Access Point]]
+
+==== Weblinks ====
+
+  * http://openwrt.org/ OpenWrt Homepage
+  * http://wiki.openwrt.org/toh/tp-link/tl-wr841nd
+
+==== Quelle ====
+[[https://wiki.freifunk.net/TP-Link_WR841ND]]
+
+{{tag>Hardware, Router}}

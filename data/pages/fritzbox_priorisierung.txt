@@ -1,0 +1,49 @@
+====== Fritzbox Priorisierung ======
+
+====== Disclaimer ======
+Diese Anleitung ist unter Hast geschrieben und muss noch Mal überarbeitet werden.
+Eine Anleitung mit Film um einzelne Geräte zu priorisieren [[priorisierung_bei_fritz_box_aendern|hier]].
+
+
+====== Nutzen ======
+
+Angenommen du brauchst deinen Internet-Anschluss gerade nicht, weil du schläfst oder auf der Arbeit bist. Durch z.B. einen [[:offloader|Offloader]] kannst du anderen Menschen die volle Bandbreite zur Verfügung stellen.
+
+Aber was ist, wenn du wieder zuhause bist und viele Menschen surfen über deinen Anschluss. Wird dann der eigene Anschluss nicht langsamer?
+
+Ja, es sei denn, du gibst den Freifunk-Routern/dem Offloader eine niedrigere Priorität in der Fritzbox. Wenn du deine Internetleitung brauchst, wird das Freifunk-Netz automatisch runter geregelt. Wenn du sie nicht brauchst, kann dein Offloader die maximale Bandbreite nutzen.
+
+====== Profile anlegen ======
+
+Nun müssen zwei Profile angelegt werden. Eines für den Freifunk-Tunnel, der benachteiligt und einer für den Rest, der bovorzugt werden soll.
+
+Internet -> Filter -> Listen -> Netzwerkanwendung hinzufügen
+
+Dort zwei Profile anlegen
+
+{{ :wiki:fb-gast03-b-1.png?nolink&800 |}}
+
+1. Alles außer Freifunk-Tunnel
+
+{{ :wiki:fb_a_f_tunnel.png?nolink&800 |}}
+
+2. Freifunk Tunnel
+
+{{ :wiki:fb_freifunk-tunnel.png?nolink&800 |}}
+
+====== Profil auswählen ======
+
+Internet -> Filter -> Priorisierung
+
+Profil dort hinzufügen
+
+{{ :wiki:fb_priorisierung2.png?nolink&800 |}}
+
+So wird bei allen Geräten im Netz der Fritzbox-Tunnel runtergeregelt, wenn er einen nutzt.
+
+Warum "Alles außer Freifunk-Tunnel" nicht bei "Echtzeitanwendung" ganz oben eintragen? Geht auch. Drann bricht aber der Tunnel ganz ab, wenn die Last zu hoch ist.
+
+====== Film ======
+Hier noch ein Film von Florian, wie man das für einzelne Geräte macht.
+
+{{youtube>Z3C2Trjo0Ck?medium}}

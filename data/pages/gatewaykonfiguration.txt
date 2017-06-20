@@ -1,0 +1,466 @@
+====== Gatewaykonfiguration ======
+
+**Achtung - Nicht benutzen, noch in Arbeit!**  --- //[[freifunk-myk@adlerweb.info|Florian Knodt]] 2015/03/10 22:30//
+
+===== Einleitung =====
+
+Dieser Guide beschreibt die Einrichtung eines Supernodes für das FF-MYK-Netz mit optionalem Internet-Uplink unter Arch Linux. Die Informationen sollten sich mit geringen Änderungen auch auf anderen Distributionen nutzen lassen.
+
+Achtung: Supernodes nutzen komplexe Routingmethoden - es werden fundierte Linux und Netzwerkkenntnisse vorausgesetzt.
+
+===== Benötigte Software =====
+
+  * [[https://aur.archlinux.org/packages/fastd/|fastd (AUR)]] -> VPN zu/von den Knoten
+  * [[https://www.archlinux.org/packages/extra/x86_64/dhcp/|dhcpd]] -> DHCP-Server
+  * [[https://www.archlinux.org/packages/extra/x86_64/bind/|bind (named)]] -> DNS-Zone
+  * [[https://www.archlinux.org/packages/core/x86_64/openvpn/|OpenVPN]] -> VPN Internetzugang
+  * [[https://www.archlinux.org/packages/extra/x86_64/haveged/|haveged]] -> Genug Entropie bereithalten; alternativ rng-tools
+  * [[https://www.archlinux.org/packages/extra/x86_64/ntp/|ntp]] -> Weil Baum
+  * [[https://www.archlinux.org/packages/extra/x86_64/php/|php]] -> Kleine Hilfsprogramme
+  * [[https://aur.archlinux.org/packages/batman-adv/|batman-adv (AUR)]] -> B.A.T.M.A.N. Routing (Kompatibilität 15!)
+  * [[https://aur.archlinux.org/packages/batctl/|batctl (AUR)]] -> B.A.T.M.A.N. Konfiguration
+  * [[https://www.archlinux.org/packages/core/x86_64/bridge-utils/|bridge-utils]] -> Netzwerkbrücke
+  * [[https://www.archlinux.org/packages/extra/x86_64/screen/|screen]] -> Wir starten fastd in screen - kann ggf. angepasst werden	
+  * [[https://​www.archlinux.org/​packages/​community/​x86_64/​vnstat/​|vnstat]] -> Traffic-Statistiken 
+  * [[https://​www.archlinux.org/​packages/​extra/​x86_64/​lighttpd/​|lighttpd]] -> Statistiken (und ggf. Karte). Anderer Server mit HTTP geht natürlich auch
+==== Optional (Karte/Statistik/...) - nicht dokumentiert ====
+
+  * python
+  * batman-alfred
+  * batman-alfred-json-git
+  * meshviewer
+  * ffmap-backend (patched)
+  * ffapi-updater (adlerweb)
+  * Ein Haufen Workarounds…
+
+===== Konfiguration =====
+
+==== Standardkonfiguration ====
+
+Das OS sollte vollständig konfiguriert sein. Es sollte eine öffentliche IPv4-Adresse und optimalerweise auch IPv6-Adresse besitzen. 
+
+==== NTP ====
+
+Um Probleme auf Grund von unterschiedlichen Systemzeiten zu vermeiden wird NTP genutzt. Dieser ist auch aus dem FF-Netz erreichbar. Es ist auf eine korrekte Zeitzone des Systems zu achten. Die Quelle kann nach eigenem Ermessen gewählt werden.
+
+<code ini /etc/ntp.conf>
+# Associate to Arch's NTP pool
+server 0.arch.pool.ntp.org
+server 1.arch.pool.ntp.org
+server 2.arch.pool.ntp.org
+server 3.arch.pool.ntp.org
+
+# By default, the server allows:
+# - all queries from the local host
+# - only time queries from remote hosts, protected by rate limiting and kod
+restrict default kod limited nomodify nopeer noquery notrap
+restrict 127.0.0.1
+restrict ::1
+
+# Location of drift file
+driftfile /var/lib/ntp/ntp.drift
+</code>
+
+NTP sollte automatisch starten
+
+==== Haveged ====
+
+Der Server muss z.T. einiges an Crypto abarbeiten und kann daher - vorallen da keine Tastatur/Mausaktionen erfolgen - schnell in einen Entropiemangel laufen. Als Workarround kann haveged gestartet werden um künstlich den Pool hoch zu halten.
+
+==== Fastd ====
+
+Fastd ist ein VPN-Server/Client, welcher zur Verbindung mit den Knoten verwendet wird. Er ist durch die geringen Speicheranforderungen optimal für Router geeignet. Als Methode kommt salsa2012+gmac zum Einsatz, zur Kompatibilität mit älteren Firmwareversionen wird auch salsa2012+umac akzeptiert. Eine unverschlüsselte Verbindung, welche bei einigen Communitys zur Steigerung der Performance angeboten wird, ist nicht aktiv. Verbindungen werden über udp/10000 abgewickelt. Für jeden Client muss der öffentliche Schlüssel hinterlegt werden. Auf unseren Gateways lassen wir ausschließlich Knoten zu, welche über das Webinterface registriert wurden (dies gilt nur für VPN, Mesh ist immer möglich!). Ein Abgleich erfolgt über ein PHP-Script, welches die öffentlichen Schlüssel der Clients aus der Datenbank abruft und passende Konfigurationsdateien erzeugt.
+
+("lamepassword" durch den geheimen Schlüssel des Servers ersetzen)
+<code ini /etc/fastd/ff/fastd.conf>
+log to syslog level info;
+interface "ffmyk-mesh-vpn";
+method "salsa2012+gmac";
+method "salsa2012+umac";
+secure handshakes yes;
+bind any:10000;
+hide ip addresses yes;
+hide mac addresses yes;
+mtu 1280;
+include peers from "peers";
+secret "lamepassword";
+</code>
+
+<code php /etc/fastd/ff/bin/fastd-api.php>
+#!/usr/bin/php -f
+<?php
+$url = '***APIURL***';
+$out = '/etc/fastd/ff/peers/';
+
+if(!is_dir($out)) die('Output Dir missing');
+if(!is_writable($out)) die('Output Dir perms');
+
+$data = file_get_contents($url);
+$data = unserialize($data);
+
+foreach($data as $router) {
+	if(!preg_match('/^[A-F0-9]{2}:[A-F0-9]{2}:[A-F0-9]{2}:[A-F0-9]{2}:[A-F0-9]{2}:[A-F0-9]{2}$/', $router['MAC'])) {
+		trigger_error('Router mit falscher MAC?!', E_USER_WARNING);
+	}elseif(!preg_match('/^[A-F0-9]{64}$/', $router['PublicKey'])) {
+		trigger_error('Router mit falschem Key?!', E_USER_WARNING);
+	}else{
+		$filename='client_'.str_replace(':', '-', $router['MAC']);
+		$fp=fopen($out.$filename, 'w');
+		fwrite($fp, 'key "'.$router['PublicKey'].'";'."\n");
+		fclose($fp);
+		$active[] = $filename;
+	}
+}
+
+$dh = opendir($out);
+while(($file = readdir($dh)) !== false) {
+	if($file != '.' && $file != '..') {
+		if(!in_array($file, $active) && (strpos($file, 'client_') !== false)) {
+			unlink($out.$file);
+		}
+	}
+}
+
+exec('killall -SIGHUP fastd');
+
+?>
+</code>
+
+Das PHP-Script sollte mindestens alle 10 Minuten via Cron aufgerufen werden (cd /etc/fastd/ff/bin ; php -f fastd-api.php). Es ist zu beachten, dass das Script zum Erstellen der Configs und reload des fastd entsprechende Berechtigungen benötigt. Der Daemon selbst wird über das Routing-Script im Screen gestartet und ist nicht als Systemdienst hinterlegt.
+
+Hinweis: Ggf. muss in der php.ini die Variable open_basedir ergänzt oder auskommentiert werden.
+
+  * ERR: Inter Supernode VPN
+
+==== DHCP ====
+
+Der DHCP-Server verteilt IPv4-Adressen an die Clients und verteilt Router und DNS-Informationen. Die IPs sind passend zur [[IPs|Liste]] zu wählen. Der Node selbst ist dabei DNS und Gateway.
+
+<code ini /etc/dhcpd.conf>
+default-lease-time 600;
+max-lease-time 3600;
+
+authoritative;
+
+log-facility local7;
+
+subnet 10.222.0.0 netmask 255.255.0.0 {
+    range 10.222.xxx.xxx 10.222.xxx.xxx;
+
+    option routers 10.222.xxx.xxx;
+    option domain-name-servers 10.222.xxx.xxx;
+}
+</code>
+
+dhcpd4 sollte automatisch starten
+
+  * TODO: Feste IPs via API
+  * TODO: Alternative DNS-Server via Liste?
+  * TODO: NTP via Liste?
+
+==== DNS ====
+
+Im FF-MYK-Netz wird neben dem "offiziellen" DNS die interne Domain ".ffmyk" genutzt. Als Uplink-DNS werden z.Zt. die Server des Digitalcourage (ehem. FoeBud) und CCC Berlin genutzt.
+
+<code ini /etc/named.conf>
+options {
+    directory "/var/named";
+    pid-file "/run/named/named.pid";
+
+    listen-on-v6 { 2a01:198:70a:ff::xxx:xxx; };
+    listen-on port 53 { 127.0.0.1; 10.222.xxx.xxx; };
+
+    dnssec-validation auto;
+
+    auth-nxdomain no;    # conform to RFC1035
+
+    allow-recursion { 10.222.0.0/16; 127.0.0.0/8;};
+    allow-transfer { none; };
+    allow-update { none; };
+
+    forwarders {
+        85.214.20.141;
+        213.73.91.35;
+    };
+
+    version none;
+    hostname none;
+    server-id none;
+};
+
+zone "localhost" IN {
+    type master;
+    file "localhost.zone";
+};
+
+zone "0.0.127.in-addr.arpa" IN {
+    type master;
+    file "127.0.0.zone";
+};
+
+zone "1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa" {
+    type master;
+    file "localhost.ip6.zone";
+};
+
+zone "255.in-addr.arpa" IN {
+    type master;
+    file "empty.zone";
+};
+
+zone "0.in-addr.arpa" IN {
+    type master;
+    file "empty.zone";
+};
+
+zone "." IN {
+    type hint;
+    file "root.hint";
+};
+
+zone "ffmyk" IN {
+    type master;
+    file "ffmyk.zone";
+    allow-query { any; };
+    allow-transfer { none; };
+};
+
+</code>
+
+<code ini /var/named/ffmyk.zone>
+$ORIGIN .
+$TTL 60 ; 1 minute
+ffmyk  IN SOA  ns.ffmyk. hostmaster.adlerweb.info. (
+                                2014070359 ; serial
+                                28800      ; refresh (8 hours)
+                                7200       ; retry (2 hours)
+                                604800     ; expire (1 week)
+                                39600      ; minimum (11 hours)
+                                )
+                        NS      ns
+                        A       10.222.xxx.xxx
+                        MX      10 mail.freifunk-myk.de.
+
+ns.ffmyk                        A       10.222.xxx.xxx
+                                AAAA    2a01:198:70a:ff::xxx:xxx
+
+ntp.ffmyk                       A       10.222.xxx.xxx
+                                AAAA    2a01:198:70a:ff::xxx:xxx
+
+www.ffmyk                       A       10.222.100.1
+                                AAAA    2a01:198:70a:ff::100:1
+
+1.ntp.ffmyk                     A       10.222.100.1
+                                AAAA    2a01:198:70a:ff::100:1
+
+</code>
+
+DNS/BIND/named sollte als Systemdienst automatisch starten
+
+  * ERR: Das ist für Master, wir bräuchten Multimaster oder Slaves
+  * TODO: Interne DNS via API
+  * TODO: NTP-Liste
+
+==== OpenVPN ====
+
+Es besteht z.Zt. ein Vertrag über Mullvad, welcher das Internet-Breakout darstellt. Es sind 3 Verbindungen möglich. Zum Connect wird OpenVPN verwendet. Die Vertragsdaten liegen bei adlerweb.
+
+<code ini /etc/openvpn/mullvad.conf>
+client
+
+dev mullvad
+dev-type tun
+
+proto udp
+#proto tcp
+
+#remote openvpn.mullvad.net 1194
+#remote openvpn.mullvad.net 443
+#remote openvpn.mullvad.net 53
+#remote se.mullvad.net # Servers in Sweden
+#remote nl.mullvad.net # Servers in the Netherlands
+#remote de.mullvad.net 1194 # Servers in Germany
+#remote us.mullvad.net # Servers in the USA
+
+# Tunnel IPv6 traffic as well as IPv4
+tun-ipv6
+
+# Keep trying indefinitely to resolve the
+# host name of the OpenVPN server.  Very useful
+# on machines which are not permanently connected
+# to the internet such as laptops.
+resolv-retry infinite
+
+# Most clients don't need to bind to
+# a specific local port number.
+nobind
+
+# Try to preserve some state across restarts.
+persist-key
+persist-tun
+
+# Enable compression on the VPN link.
+comp-lzo
+
+# Set log file verbosity.
+verb 3
+
+remote-cert-tls server
+
+ping-restart 60
+
+# Allow calling of built-in executables and user-defined scripts.
+script-security 2
+
+# Parses DHCP options from openvpn to update resolv.conf
+#up /etc/openvpn/update-resolv-conf
+#down /etc/openvpn/update-resolv-conf
+
+ping 10
+
+ca /etc/openvpn/mullvad/ca.crt
+cert /etc/openvpn/mullvad/mullvad.crt
+key /etc/openvpn/mullvad/mullvad.key
+
+crl-verify /etc/openvpn/mullvad/crl.pem
+
+# Update routing information.
+# Do not use standard configuration pushed via DHCP!
+route-noexec
+up /etc/openvpn/mullvad/mullvad-up
+</code>
+
+<code bash /etc/openvpn/mullvad/mullvad-up>
+#!/bin/bash
+#/sbin/ip route replace default via $4 table 42
+sleep 3
+echo Reroute via $4
+ip route replace 0.0.0.0/1 via $4 table 42
+ip route replace 128.0.0.0/1 via $4 table 42
+
+exit 0
+
+</code>
+chmod +x nicht vergessen!
+
+OpenVPN wird über das Routing-Script gestartet und ist nicht als Systemdienst hinterlegt.
+
+
+==== Traffic-Statistik ====
+
+Um den Überblick zu behalten verwenden wir vnstat um Trafficstatistiken (nur Interface-Auslastung) zu sammeln.
+
+Nach der Installation müssen die Interfaces einmalig registriert werden
+<code bash>
+vnstat -u -i enp3s0
+vnstat -u -i br-ffmyk
+vnstat -u -i mullvad
+</code>  
+
+Im Anschluss wird der Daemon vnstatd gestartet und als Systemdienst eingerichtet.
+
+  * TODO: Zentrales sammeln
+
+==== Routing ====
+
+Beim Start des Servers sollte ein Script die grundlegende Konfiguration durchführen. Dies beinhaltet u.A. die Einrichtung der Routingtablellen und Netzwerkbrücken.
+
+[[MAC-Adressen|MAC-Adresse]] aus der Liste wählen - diese wird genutzt um das Gerät in der Map als Gateway zu identifizieren.
+
+Vor dem Ausführen des Scripts muss das Kernelmodul batman-adv geladen sein.
+<code bash /etc/modules-load.d/batman.conf>
+batman-adv
+</code>
+
+
+<code bash init.sh>
+# Fastd starten
+screen -AmSd fastd fastd -c /etc/fastd/ff/fastd.conf --log-level debug
+
+#Warten sodass fastd die devices sicher erstellt hat
+sleep 5
+
+#MAC-Adresse des VPN-Interface einrichten
+ip link set down address 02:FF:4D:59:4B:10 dev ffmyk-mesh-vpn
+ip link set up dev ffmyk-mesh-vpn
+
+#VPN-Interface als B.A.T.M.A.N.-Device einrichten
+batctl if add ffmyk-mesh-vpn
+
+#Server-Modus (=kann Broadcast empfangen, für DHCP)
+batctl gw server
+
+#Intervall der Originator-Beacons
+batctl it 10000
+
+#B.A.T.M.A.N-Interface einschalten
+ip link set up dev bat0
+
+#Netzwerkbrücke einrichten und B.A.T.M.A.N-Interface hinzufügen
+brctl addbr br-ffmyk
+brctl addif br-ffmyk bat0
+ip link set up dev br-ffmyk
+
+#IPs vergeben
+ip addr add 10.222.xxx.xxx/16 dev br-ffmyk
+ip addr add 2a01:198:70a:ff::xxx:xxx/64 dev br-ffmyk
+
+#Nur Stat-Server
+#screen -AmSd alfred alfred -i br-ffmyk -b bat0 -m
+#screen -AmSd batadv-vis batadv-vis -i bat0 -s
+
+#Hop-Penalty soll den Nodes Mesh-Verbindungen schmackhafter machen - normal würde VPN wegen geringerem Packet-Loss immer bevorzugt
+echo 128 > /sys/class/net/bat0/mesh/hop_penalty
+
+#IP-Forwardung wäre für Router hilfreich…
+sysctl -w net.ipv4.ip_forward=1
+
+#OpenVPN starten
+systemctl start openvpn@mullvad
+
+#Routing  umbiegen - alles was über br-ffmyk rein kommt wird als 0x1 markiert
+iptables -t mangle -A PREROUTING -i br-ffmyk -j MARK --set-xmark 0x1/0xffffffff
+
+#Alles auf dem Interface mullvad (via OpenVPN) macht NAT-Masquerading
+iptables -t nat -A POSTROUTING -o mullvad -j MASQUERADE
+
+#Routingtabelle 42 (==Freifunk) ist per default nicht erreichbar
+ip route add unreachable default table 42
+
+#Alles, was mit 0x1 markiert wird gehört zu Tabelle 42
+ip rule add from all fwmark 0x1 table 42
+
+#Alles mit Freifunk-IP - woher auch immer - gehlrt zu Tabelle 42
+ip rule add from 10.222.0.0/16 table 42
+
+#Tabelle 42 routet das Ziel mit Freifunk-IPs über das Device br-ffmyk
+ip route add 10.222.0.0/16 dev br-ffmyk table 42
+
+#DHCP brauch bei neu auftauchenden devices (start fastd) einen restart
+systemctl restart dhcpd4 
+</code>
+
+----
+===== Es folgt Schrott ===== 
+
+Todo:
+  * ICVPN
+  * BGP (bird/bird6)
+  * radvd
+
+----
+
+  * fastd
+  * dhcpd
+  * radvd
+  * named
+  * OpenVPN (mullvad)
+  * haveged (Entropie)
+
+----
+
+ref
+https://wiki.luebeck.freifunk.net/gatewayconfig
+
+
+----

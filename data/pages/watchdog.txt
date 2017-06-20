@@ -1,0 +1,36 @@
+====== Einfacher Software-Watchdog ======
+<code bash>
+#!/bin/sh
+
+tries=0
+while [[ $tries -lt 5 ]]
+do
+        if [[ `/usr/sbin/batctl o | wc -l` -gt 25 ]] > /dev/null
+        then
+                echo "Alles OK"
+                exit 0
+        fi
+        tries=$((tries+1))
+        echo "Knotenfehler?"
+        sleep 10
+done
+
+echo Neustart
+reboot
+</code>
+
+Z.B. über crontab minütlich ausführen. Startet neu wenn weniger als 25 Nachbarknoten erreichbar sind.
+
+====== Automatischer Reboot bei Kernel-Panic ======
+
+In Grub (/dev/sda1) folgenden Kernelparameter ergänzen: panic=3 (== 3 Sekunden nach Panic neu starten)
+Funktioniert nur auf x86 o.Ä., die Router starten mit anderen Bootloadern
+
+Alternativ und universell per script beim boot setzen:
+
+/etc/sysctl.conf
+<code>
+[...]
+kernel.panic = 3
+
+</code>

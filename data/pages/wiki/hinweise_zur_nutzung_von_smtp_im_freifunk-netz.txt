@@ -1,0 +1,5 @@
+====== Hinweise zur Nutzung von SMTP im Freifunk-Netz ======
+
+Aus Gründen des SPAM-Schutzes ist es bei einigen unserer Provider leider nicht möglich eine TCP-Verbindung zu einem Ziel mit dem Port 25 (SMTP) aufzubauen. Dies verhindert zum Teil auch den Betrieb normaler E-Mail-Programme (MUA) innerhalb unseres Netzes.
+
+Als Workarround bis zur Klärung ist es bei den meisten Anbietern möglich für ausgehende Mails im Mailprogramm statt des Ports 25 (SMTP) den Port 587 (SMTP-Submission) einzutragen und so ein funktionierendes E-Mail-Setup zu erhalten.

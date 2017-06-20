@@ -1,0 +1,32 @@
+  * 02:ff -> Müsste für interne Benutzung reserviert sein (Quelle?)
+  * 4D:59:4B -> Hex-Werte, ASCII 'MYK'
+
+
+  * 02:FF:4D:59:4B:10 -> fastd1
+  * 02:FF:4D:59:4B:11 -> fastd1 (legacy)
+  * 02:FF:4D:59:4B:2A -> fastd1 -> fastd2
+  * 02:FF:4D:59:4B:2B -> fastd1 -> fastd9
+  * 02:FF:4D:59:4B:40 -> ESSID used for 2.4GHz mesh
+  * 02:FF:4D:59:4B:41 -> BSSID used for 2.4GHz mesh
+  * 02:FF:4D:59:4B:50 -> ESSID used for 5GHz mesh
+  * 02:FF:4D:59:4B:51 -> BSSID used for 5GHz mesh
+  * 02:FF:4D:59:4B:A0 -> adlerweb, Charon (Local Mesh Hub)
+  * 02:FF:4D:59:4B:A1 -> adlerweb, FBU (Local Mesh Hub)
+  * 02:FF:4D:59:4B:B0 -> fastd2
+  * 02:FF:4D:59:4B:B2 -> fastd2 -> fastd1
+  * 02:FF:4D:59:4B:B3 -> fastd2 -> fastd4
+  * 02:FF:4D:59:4B:D0 -> fastd4
+  * 02:FF:4D:59:4B:D1 -> fastd4 -> fastd2
+  * 02:FF:4D:59:4B:D2 -> fastd4 -> fastd7
+  * 02:FF:4D:59:4B:D4 -> Kartenserver
+  * 02:FF:4D:59:4B:D5 -> Firmwareserver
+  * 02:FF:4D:59:4B:24 -> fastd7
+  * 02:FF:4D:59:4B:25 -> fastd7 -> fastd4
+  * 02:FF:4D:59:4B:26 -> fastd7 -> fastd8
+  * 02:FF:4D:59:4B:D6 -> fastd8
+  * 02:FF:4D:59:4B:DA -> fastd8 -> fastd7
+  * 02:FF:4D:59:4B:DB -> fastd8 -> fastd9
+  * 02:FF:4D:59:4B:D7 -> fastd9
+  * 02:FF:4D:59:4B:DC -> fastd9 -> fastd8
+  * 02:FF:4D:59:4B:DD -> fastd9 -> fastd1
+  * 02:FF:4D:59:4B:FF -> Node Anycast

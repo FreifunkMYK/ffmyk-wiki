@@ -1,0 +1,9 @@
+====== VLAN tagging ======
+
+====== Nutzen ======
+Mehrere Netzwerke über ein Kabel
+
+  * Offloader, der nur eine Netzwerkkarte hat
+  * FF-Router, der Meshnetz vom Offloader erhält, aber auch das private LAN ausstrahlen soll
+
+https://wiki.bremen.freifunk.net/Anleitungen/Offloader-Futro

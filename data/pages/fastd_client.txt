@@ -1,0 +1,40 @@
+Dieser Text beschreibt eine lokale konfiguration als fastd-client. Hiermit kann ein Rechner als VPN-Client fungieren und zu den Supernodes verbinden. Dies ist z.B. für Testaufbauten oder lokale Verteiler interessant.
+
+Stub: Hier gibt es nur wichtige Eckdaten, keine vollständige Anleitung!
+
+Benötigt:
+  * fastd
+  * batman
+  * batctl
+
+Optional:
+  * alfred
+
+  - Keys generieren: fastd --generate-key
+  - Öffentlichen im Knotenregister bekannt machen
+  - Config vornehmen
+
+
+Hier mit fastd1 - andere siehe [[https://github.com/FreifunkMYK/site-ffmyk/blob/master/site.conf|site.conf]]
+<code ini fastd-config>
+log to syslog level info;
+interface "ffmyk-mesh-vpn";
+method "salsa2012+gmac";
+method "salsa2012+umac";
+secure handshakes yes;
+hide ip addresses yes;
+hide mac addresses yes;
+mtu 1280;
+secret "GEHEIMERSCHLUESSEL";
+
+include peers from "peers";
+
+on up "
+  ip link set up $INTERFACE
+";
+</code>
+<code ini peers/server>
+
+key "d78c8c9b2977f732cdd00d2d4b557cfb5de1438897d33b9ec04037512dd11d6a";
+remote "fastd1.services.freifunk-myk.de" port 10000;
+</code>

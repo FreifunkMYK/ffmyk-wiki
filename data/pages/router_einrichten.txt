@@ -1,0 +1,117 @@
+====== Freifunk-Software auf Router installieren ======
+ 
+====== Was Du brauchst: ======
+
+1.	**Internetanschluss** oder Du bist in** Reichweite von einem anderen Freifunker**. Ein Freifunk Router ohne eines der beiden macht erstmal kein Sinn.
+
+2.	Ein **Router** der kompatible mit einer Firmware von Freifunk MYK ist. Eine Liste mit Router die Du verwenden kannst findest Du in der Download Seite der Images. (siehe Image finden und runterladen)\\ 
+Wenn Du dir ein neuen Router kaufen möchtest, empfehlen wir folgendes Modele :
+  * <del>[[hardware:tp-link_tl-wr841n|TP-Link WR841N]] (für kleine Installationen) für ca. 20€. Der WR842 hat ab Version 10 deutlich bessere Hardware.</del> (Nur bis V11, danach neuer Chipsatz und nur ungetestete Firmware verfügbar. Suche nach Nachfolger läuft.)
+  * TP-Link WR842N (für kleine Installationen) für ca. 30€. Der WR842 hat ab Version 3 deutlich bessere Hardware.
+  * TP-Link WR1043ND (für größere Installation) ca. 60€. Der WR1043ND hat ab Version 2 deutlich bessere Hardware.
+  * TP-Link Archer C7 (für größere Installationen)
+  * TP-Link CPE210  für den Außenbereich (Wetterfest) ca. 50 €
+
+Es gibt natürlich auch andere Hersteller und andere Modelle, eine vollständige Liste ist bei [[https://wiki.freifunk.net/Freifunk_Firmware_Gluon/Hardware|Freifunk.net]] zu finden. Die oben genanten Modelle haben sich auf Grund ihres Preis-Leistungs-Verhältnis in unserem Netz verbreitet, die Konzentration auf den Hersteller TP-Link dabei eher zufällig.
+
+{{:wiki:841-1280_6_.jpg?200|}}
+  
+3.	Ein **Freifunk MYK Image** für dein Router. Um ein Image zu finden besuche die Seite: https://www.freifunk-myk.de/router/ Von dort aus findest Du das passende Image.
+
+  Achtung: Verwende nur Images aus unsere Community. Anderen würden wahrscheinlich auch funktionieren, 
+  jedoch sind Netzwerk und Konfigurationen doch immer etwas anders aufgebaut. 
+
+  Achtung: Beachte bitte beim Kauf das es auch von einem Modell mehre Versionen gibt. Im Einzelhandel kannst Du das meist am Aufdruck auf dem Karton die genaue Version erkennen. Bei Online-Händler musst Du auf „gut Glück“ Bestellen oder die Version dort erfragen. Ändert der Hersteller sein Sortiment und bringt eine neue Version heraus kann es einige Zeit dauern, bis wie diese getestet haben und Software anbieten können.
+  
+====== Was Du machen musst : ======
+ 
+  - Router besorgen
+  - Image Runterladen
+  - Image Installieren
+  - Router einrichten
+  - Router mit Internet oder anderen Freifunker verbinden
+  - Router bei Freifunk-MYK.de registrieren
+
+====== Hilfreiche Videos über das Installieren vom Freifunk ======
+
+
+Anleitung : https://youtu.be/d9tGLfzIAoA \\
+Anleitung : https://youtu.be/tueVWUisvWI \\
+Wissenswerteres über Freifunk allgemein :  https://youtu.be/cD-Ht9PcueI \\
+
+Bitte beachte das die Videos aus anderen Communitys stammen. Generell ist das Installieren immer gleich, verwende bitte nur Images aus unserer Community.
+
+====== Image finden und Runterladen ======
+
+Hierzu notiere dir erst die Typenbezeichnung deines Routers, diese findest du üblicherweise auf der Packung oder Rückseite des Routers. Sollte dort eine Version notiert sein notiere auch diese.
+
+@TODO: Bild Rückseite 
+
+Öffne nun unsere Routerliste unter https://www.freifunk-myk.de/router/ - dort suchst du über Bezeichnung und Bild deinen Router und klickst ihn an. Im unteren Bereich werden die verfügbaren Firmwareversionen angezeigt. Als "stable" bezeichnen wir jene, welche bereits ausgiebig getestet wurden, diese sind gerade für den Einstieg empfohlen. Wenn du "stable" anklickst findest du im Abschnitt "factory" eine Liste aller unterstützten Versionen. Suche die erste Zeile mit deiner Routerversion und lade die Firmware über den Link in der letzten Spalte herunter.
+
+Hinweis: Sind in der Tabelle nur einstellige Versionsnummern hinterlegt (z.B. "v1") zählt diese auch für alle Unterversionen, passt also auch für Router mit dem Aufdruck "v1.2".
+
+Keine Stable-Firmware? Dann schau im Abschnitt Beta nach. Diese ist noch nicht so gut getestet und kann ein paar Ecken und Kanten haben, sollte aber die Grundfunktionen erfüllen können.
+
+Immer noch nichts? Unter http://firmware.freifunk-myk.de kannst du zum Teil weitere Versionen finden. Auch hier gibt es stable und beta, im zusätzlichen Ordner "nightly" sind die aktuellsten Versionen mit den neuesten bekannten Modellen. Beachte bitte, dass diese Versionen ungetestet sind - wenn etwas schief geht kann es sein, dass du den Router [[router_reparieren|reparieren ("unbricken")]] oder auf unseren Treffen vorbei bringen musst. 
+
+====== Image Installieren „Flashen“ ======
+
+Jetzt musst Du das Image auf dein Freifunk Router Installieren. Als erstes trenne bitte **alle** Netzwerkkabel, und schalte dein WLAN an deinem PC/Notebook aus.
+Verbinde jetzt dein Router mit deinem PC über das Netzkabel. Am Router ist das ein beliebigen LAN-Netzanschluss (meist gelbe Anschlüsse) aber **nicht** der WAN Port (meist blau)  
+Jetzt starte den Router und warte einige Sekunden bis er gestartet ist. Du erkennst das dran das einige Kontroll-LEDs anfangen zu leuchten und zu flackern.
+
+Öffne dann dein Internet Browser und rufe die Konfigurations-Seite des Routers auf. Die Adresse findest Du in der Anleitung zu deinem Router. Meist ist das http://192.168.0.1 oder http://192.168.1.1
+
+Du wirst dann nach einem Benutzer und Passwort gefragt. Auch diese Daten findest Du im Handbuch deines Routers. Der Standard-Benutzer ist **admin** und das Passwort **admin**
+Dann bist Du mit deinem Router verbunden! Suche nun nach dem Menü-Punkt „Firmware Update“. Den findest Du im Menü "System-Tools"
+
+{{:wiki:flash.jpg?}}
+
+Klicke auf den Button "Browse" und wähle die FreiFunk-Firmware aus die Du vorher runtergeladen hast. Jetzt klicke auf **Upgrade**. Nun wir aus deinem Router ein Freifunk Router.
+
+Hinweis: Einige TP-Link-Modelle haben Probleme mit langen Dateinamen. Sollte die Freifunk-Firmware nicht akzeptiert werden kann es helfen die Datei vorher auf deiner Festplatte in einen kürzeren Namen (z.B. freifunk.bin) umzubenennen.
+
+**ACHTUNG** 
+Bitte beachte dass wärmend des Updates nichts am Router ausgesteckt oder gewackelt wird! Der Vorgang muss ohne Unterbrechung abgeschlossen werden!
+Habe Geduld!
+
+Das Flashen ist abgeschlossen, wenn die System-LED ("Schloss") langsam blinkt.
+
+====== Einrichten des Freifunk Router ======
+
+Nach dem der Router einmal neu gestartet ist wird nun der Router eingerichtet. Was du dir schon mal überlegen solltest:
+
+**Wie soll der Router heißen? 
+**Der Name sollte so gewählt sein das Du den Router wiedererkennst. Zum Beispiel Straßenname oder Namens-Kürzel
+
+**Soll der Router auf der Freifunk Karte sichtbar werden? Auf welchen Koordinaten?
+**Du kannst entscheiden ob dein Router auf der Karte sichtbar wird. Das kann anderen Menschen helfen ein Freifunk in seiner Nähe zu finden. Wenn Du dein Router auf der Karte anzeigen möchtest, aber die Koordinaten nicht kennst, öffne [[http://map.freifunk-myk.de|map.freifunk-myk.de]], klicke oben rechts auf die Pin-Nadel und dann auf den gewünschten Standort. Links werden nun die zugehörigen Koordinaten angezeigt.
+
+
+Rufe jetzt im Browser die Seite http://192.168.1.1 auf. Wenn du keine speziellen Wünsche hast trage einfach die Daten ein und klicke auf Fertig. Beachte bitte, dass all diese Daten öffentlich sichtbar sind.
+
+{{:wiki:luci.jpg?}}
+
+Unter Erweitert kannst du technischere Dinge wie IPs, Bandbreitenbegrenzungen oder Passwörter für einen Fernzugriff einstellen. Letzterer ist standardmäßig nicht aktiv.
+
+Nach klicken auf „Fertig“ hast Du deinen Router fertig eingerichtet.  Du bekommst jetzt noch einen VPN-Key. Diesen brauchst Du um dein Router zu registrieren, dazu gleich mehr. Am besten kopierst du dir den angezeigten Link in eine Textdatei oder scannst den QR-Code mit deinem Handy.
+
+====== Router starten ======
+
+{{:wiki:kabel.jpg?}}
+
+Jetzt muss der Router noch mit deinem Internet-Anschluss verbunden werden. Schließe einfach ein Netzkabel von deinem Internetanschluss an den WAN-Anschluss des Freifunk-Routers (meist blau) an. Das Kabel zu deinem PC brauchst du nicht mehr.
+Damit ist die Installation fertig!
+
+====== Knoten (Router) bei Freifunk registrieren ======
+
+Zuletzt musst du deinen Knoten noch bei uns anmelden. Wir machen dies um die Verschlüsselung zu realisieren und einen Ansprechpartner zu kennen für den Fall, dass dein Router mal eine Netzstörung o.Ä. verursacht. Wir nutzen deine Daten nur in Fällen, in denen der Betrieb gestört wird, du bekonnst selbstverständlich eine Werbung oder ähnliches.
+Ohne Registrierung kann dein Router sich nur per Funk zu anderen Freifunk-Knoten verbinden, nicht aber über deinen Internetanschluss.
+
+Schließe also wieder ein "normmales" Internet an deinen PC an und öffne den Link von eben. Du wirst auf unsere Webseite geleitet. Wenn du noch kein Konto hast melde dich bitte oben rechts an. Nach dem Einloggen sollte das Registrierformular schon komplett ausgefüllt sein - einfach abschicken und nach ein paar Minuten ist der Zugang über deinen neuen Freifunk-Router möglich.
+
+@TODO: Details?
+
+====== Noch Fragen ======
+Du erreichst uns unter mayen-koblenz@freifunk.net oder auf einem unserer Treffen.

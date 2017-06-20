@@ -1,0 +1,13 @@
+====== Treffen 25.02.2015 ======
+
+
+  * Stable Version muss noch aus dem Stable Gluon gebaut werden und sollte in den nächsten Wochen online gehen. 
+    * Automatisches Update muss noch eingerichtet werden.
+  * Automatisches Update: noch nicht aktiviert, es müssen noch GPG Schlüssel bestimmt werden die das Update Verifizieren dürfen.
+  * Ein zweiter Knoten ist in Planung und dürfte die nächsten Tage online gehen.
+  * 
+
+
+
+
+{{tag>Protokoll}}

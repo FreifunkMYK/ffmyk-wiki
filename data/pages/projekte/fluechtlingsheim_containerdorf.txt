@@ -1,0 +1,23 @@
+====== Flüchtlingsheim Containerdorf ======
+
+Anlagenbesichtigung: 14.07.2015 \\
+Vor Ort: Ansgar, Thomas, Elias, Sebastian \\
+Wohneinheiten: 33 a 3 Personen
+
+===== Umgebung =====
+{{:projekte:dsc_9743(1).jpg?400 |}}
+{{:projekte:dsc_9744.jpg?400 |}}
+{{:projekte:dsc_9745.jpg?400 |}}
+{{:projekte:dsc_9747.jpg?400 |}}
+{{:projekte:dsc_9748.jpg?400 |}}
+
+===== Planung =====
+{{:projekte:planung1.png?400 |}} 
+Hier ist eine Skizze des Geländes und vorläufige Planung der Antennen. Die Idee ist es mit zwei Sektorantennen den Platz vor den Containern aus zu leuchten da es schwierig sein wird Funk in die Container zu bekommen.
+
+A= Büro mit dem Anschluss \\
+K= Küche
+
+Die Kreise markieren mögliche Anbringunsorte, wobei die Anbringung auch an allen anderen Orten möglich wäre.
+
+{{tag>Unsortiert}}

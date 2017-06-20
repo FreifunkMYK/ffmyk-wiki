@@ -1,0 +1,67 @@
+====== Freifunk an FRITZ!Box Gastzugang ======
+
+Über den Gastzugang der FRITZ!Box lässt sich ein vom eigenen Netzwerk separater Bereich schaffen, welcher für Freifunk genutzt werden kann. Die Trennung dient als zusätzliche Sicherheit und gewährleistet, dass selbst bei einer Sicherheitslücke der Freifunk-Firmware ein Angreifer keinen Zugriff auf andere Geräte Ihres persönlichen Netzwerkes erhalten kann.
+
+Alle Anleitungen beziehen sich auf die Firmware Stand Dezember 2016, sollte Ihr Anbieter eine ältere oder neuere Version einsetzen kann die Menüführung geringfügig abweichen. Bei Fragen einfach auf der Mailingliste melden.
+
+===== Gastzugang einschalten =====
+
+  - Öffnen Sie das Webinterface Ihres Routers (meist [[http://fritz.box|http://fritz.box]])
+  - Melden Sie sich mit Ihrem Kennwort an
+  - Klicken Sie auf Heimnetz -> Heimnetzübersicht -> Netzwerkeinstellungen{{ :wiki:fb-gast01.png?100|}}
+  - Schalten Sie "Gastzugang für LAN 4" ein
+    - Wichtig: Die Nutzungsbedingungen dürfen nicht aktiviert werden
+  - Bestätigen Sie mit Übernehmen
+
+Ab diesem Zeitpunkt ist die Trennung für den Anschluss "LAN 4" aktiv, an diesem wird der Freifunk-Router angeschlossen. Leider sperrt die FRITZ!Box ab Werk in diesem Modus alle Internetzugriffe mit Ausnahme von Webseitenaufrufen. Hierdurch wird auch der Tunnelaufbau des Freifunk-Routers blockiert und muss explizit freigegeben werden.
+
+===== Freifunk-Zugriff freigeben =====
+
+==== Einfache Freigabe ====
+
+Hierbei wird dem Freifunk-Router ein voller Zugriff auf das Internet eingeräumt
+
+  - Klicken Sie auf Internet -> Filter -> Zugangsprofile
+    * {{:wiki:fb-gast02.png?200|}}
+  - Suchen Sie den Eintrag "Gast" und klicken Sie auf den Stift zum bearbeiten
+  - Löschen Sie am Ende der Seite den Punkt "alles außer Surfen und Mailen" durch Klick auf das rote X
+    * {{:wiki:fb-gast03a.png?200|}}
+  - Bestätigen Sie die Änderung mit "OK"
+    - Hinweis: Eine Zeitbegrenzung an dieser Stelle erreicht meist nicht den gewünschten Effekt, kann zu Störungen führen und sollte vermieden werden.
+    - Hinweis: Die Filtereinstellungen für Internetseiten betreffen nur nicht-Freifunk-Verbindungen und sind daher nicht wirksam
+
+{{youtube>y5esrv0PGiU?medium}}
+
+==== Eingeschränkte Freigabe ====
+
+Hierbei wird dem Freifunk-Router lediglich ein Zugriff auf weinige Protokolle eingeräumt. Hierdurch kann ein möglicher Angreifer Ihren Internetzugang nur noch stark eingeschränkt Missbrauchen.
+
+Für Freifunk werden die Ports **udp/53 (DNS)** sowie **udp/10000 (Fastd-Tunnel)** verwendet. Für ältere Systeme und Tests kommt zum Teil auch udp/10001 zum Einsatz.
+
+  - Klicken Sie auf Internet -> Filter -> Listen
+    * {{:wiki:fb-gast03-b-1.png?200|}}
+  - Klicken Sie auf "Netzwerkanwendung hinzufügen"
+  - Geben Sie einen aussagekräftigen Namen wie "Alles außer Freifunk"
+    * {{:wiki:fb-gast03-b-2.png?200|}}
+  - Klicken Sie auf "Neues Protokoll"
+  - Wählen Sie als Protokoll "TCP", Quell- und Zielport lassen Sie auf "beliebig"
+    * {{:wiki:fb-gast03-b-3.png?200|}}
+  - Bestätigen Sie mit OK
+  - Wiederholen Sie die Schritte ab "Neues Protokoll" für folgende Werte:
+    - Protokoll UDP, Zielport 1-52
+    - Protokoll UDP, Zielport 54-9999
+    - Protokoll UDP, Zielport 10002-65535
+  - Bestätigen Sie die Liste mit OK
+    * {{:wiki:fb-gast03-b-4.png?200|}}
+  - Klicken Sie auf den Reiter "Filter"
+  - Suchen Sie den Eintrag "Gast" und klicken Sie auf den Stift zum bearbeiten
+    * {{:wiki:fb-gast02.png?200|}}
+  - Löschen Sie am Ende der Seite den Punkt "alles außer Surfen und Mailen" durch Klick auf das rote X
+    * {{:wiki:fb-gast03a.png?200|}}
+  - Sperren Sie die Anwendung "Alles außer Freifunk" durch Auswahl in der Liste
+    * {{:wiki:fb-gast03-b-5.png?200|}}
+  - Bestätigen Sie die Änderung mit "OK"
+    - Hinweis: Eine Zeitbegrenzung an dieser Stelle erreicht meist nicht den gewünschten Effekt, kann zu Störungen führen und sollte vermieden werden.
+    - Hinweis: Die Filtereinstellungen für Internetseiten betreffen nur nicht-Freifunk-Verbindungen und sind daher nicht wirksam
+
+{{youtube>CmXgWDM-J0g?medium}}

@@ -1,0 +1,54 @@
+====== Offloader ======
+
+====== Idee ======
+Die normalen Freifunk-Router haben nur eine begrenzte Rechenleistung um den VPN-Tunnel zum Fastd aufzubauen. Folglich erreicht man mit einem 841er maximal 7-8 MBit/s ins Internet. Der "WLAN-Verkehr" zwischen den Nodes ist davon nicht betroffen, da er wenig Leistung erfordert.
+
+Desktop und Laptop-Prozessoren sind für diese Aufgabe besser geeignet. Man spielt also ein Freifunk-Image auf solch einen Rechner. Dieser übernimmt dann das Verschlüsseln und Tunneln, sodass die anderen Route nur noch das Netz verteilen müssen 
+
+====== Grundlagen (Linux) ======
+
+Nimm einen Computer mit zwei Netzwerkkarten. Starte diesen mit einem Linux-Live-Image und spiele mit dd das x86-Image von [[https://firmware.freifunk-myk.de]] auf. Starte den Rechner. Er verhält sich von nun an wie ein Freifunk-Knoten und ist über 192.168.1.1 konfigurierbar.
+
+Möglicherweise fehlen Treiber im Node. Folgendes wird wahrscheinlich nicht erkannt:
+  * USB-Tastatur
+  * USB-Netzwerkkarte
+  * WLAN-Modul, falls vorhanden
+
+Diese können über den Modulordner heruntergeladen und nachinstalliert werden. Wenn das Netzwerkmodul nachinstalliert wurde, muss es noch manuell eingerichtet werden, da das Betriebssystem sonst nur eine Karte verwendet. 
+
+====== x86-Offloader (Siemens S550) ======
+Eine detaillierte Annleitung findet man hier:
+[[https://wiki.bremen.freifunk.net/Anleitungen/Offloader-Futro]]
+
+Um einen x86-Offloader zu bauen, benötigt man einen Computer mit zwei Netzwerkkarten. Er sollte günstig, leise und sparsam sein. Dieser kann zum Beispiel ein nachterüsteter Siemens S550 sein. Gebrauchte Computer dieser Art erhält man zum Beispiel für unter 20€ bei eBay. Technische Daten:
+
+  * Amd Sempron 2100+ Mobile
+  * 1GB RAM
+  * 1GB Festplattenspeicher
+  * 1 freier PCI-Slot(nicht PCIe) der jedoch eine Riserkarte braucht um richtig nutzbar zu sein.
+  * Passive Kühlung
+  * Externes Netzteil
+
+Außerdem wird noch eine LowProfile-PCI-Netzwerkkarte und eine PCI-Riserkarte benötigt. 
+  * LowProfile = verkürtzte Blende
+  * Riserkarte = Aufsatz, der den Anschluss "um 90° dreht"
+
+Danach Tastatur, Bildschirm anschließen und über ein Linux-Live-System starten. Auf dem System die x86 Firmware herunterladen
+(gluon-ffmyk-...-x86-generic.img.gz), die Datei entpacken und mit dd auf die interne Festplatte schreiben. Nach einem Neustart verhält sich der Offloader wie ein normaler Freifunk-Router und kann unter der IP 192.168.1.1 eingerichtet werden.      
+
+
+====== Virtualisierter Offloader (Virtualbox) [broken] ======
+**!!! Diese Anleitung sollte funktionieren, sie tut es aber nicht. Wenn du weißt warum, repariere sie bitte. !!!**
+**!!! Es ist nur eine Mesh-Verbindung zur VM möglich. Außerdem funktioniert das Anmelden beim Fastd nicht!!!***
+
+Wenn man unterwegs ist um z.B. Freifunk vorzustellen und Internet zur Verfügung hat, kann man einen Node als virtuelle Maschine auf seinem Laptop laufen lassen. Der Laptop verfügt in diesem Beispiel über eine LAN und eine WLAN Schnittelle.
+
+Das Internet kommt dann z.B. über WLAN zum Laptop. Das Mesh-Netz verlässt diesen über den Netzwerk-Port und wird von einem angeschlossenem Node verteilt. Der Laptop kann inklusive Internet weiter verwendet werden.
+
+Das Image für einen virtuellen Offloader kann man als .vdi von [[https://firmware.freifunk-myk.de]] herunterladen. Dann eine neue Maschine erzeugen und das .vdi als Festplatte einbinden. Der Maschine müssen vor dem Starten zwei Netzwerkadapter hinzugefügt werden. Beide stellt man auf "Netzwerkbrücke" und beide auf die LAN-Karte. Achtung: Ein zusätzlicher DHCP-Server kann das Netzwerk durcheinander bringen.
+
+Nun startet man die Maschine und kann mit der gewohnten IP-Adresse [[http://192.168.1.1]] darauf zugreifen. Hier die gewohnten Einstellungen vornehmen und Mesh-On-LAN aktivieren. Danach die Maschine über das Webinterface neu starten und den Node registrieren.
+
+Danach fährt man die Maschine herunter. Nun ändert man die zweite Netzwerkkarte in Virtualbox auf die WLAN-Karte. Nach dem Start der Maschine erhält diese Internet über WLAN und liefert über den LAN-Port das Mesh-Netz für andere Nodes.
+
+

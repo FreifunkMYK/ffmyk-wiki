@@ -1,0 +1,29 @@
+//Diese Seite sammelt Informationen zu den Flüchtlingsunterkünften in Mayen, Koblenz und Umgebung. Auf dem Überblicksartikel **[[https://wiki.freifunk.net/Freifunk_Hilft|Freifunk Hilft]]** finden sich sicherlich auch Aktivitäten in deiner Stadt.//
+
+===== Herzlich Willkommen ... =====
+... auf der Einstiegsseite von **Freifunk MYK** zum Thema Flüchtlinge! 
+
+Wir wollen uns gemeinsam dafür engagieren, dass bestehende und geplante Flüchtlingsunterkünfte mit WLAN ausgestattet werden. Siehe hierzu auch den Blog Eintrag [[https://freifunk.net/blog/2015/01/lieber-fuer-menschen-als-gegen-irgendwas/|Lieber FÜR Menschen als GEGEN irgendwas!]].
+
+**Wir brauchen Unterstützung!** Insbesondere suchen wir:
+  * Menschen, die in der Umgebung von Unterkünften leben oder arbeiten und die bereit sind den Internetzugang //sicher// zu teilen
+  * Betreiber die Verstanden haben, das die durch WLAN ermöglichte Kommunikation ein sehr wichtiger Aspekt bei der Unterbringung von Geflüchteten ist und [[https://freifunk.net/worum-geht-es/|mit uns]] zusammenarbeiten möchten
+sowie Unterstützung jeder Art. Zögere nicht uns zu kontaktieren. Du erreichst uns per [[http://lists.freifunk.net/mailman/listinfo/mayen-koblenz-freifunk.net|Mailinglist]], [[http://freifunk-myk.de/#Kontakt|Kontaktformular]] oder auf unseren [[http://wiki.freifunk-myk.de/willkommen#Treffen|regelmäßigen Treffen]].
+
+
+
+===== Bekannte Unterkünfte =====
+
+Nachfolgend eine Übersicht der Unterkünfte, die Freifunk MYK bekannt sind. Falls du weitere Unterkünfte kennst, trage sie bitte ein.
+//Bitte aus **Datenschutz**gründen nur Informationen einzutragen, die bereits öffentlich bekannt sind (Presse, Google, ..).//
+
+^ Unterkunft                            ^ Betreiber        ^ Ort      ^ Wiki-Seite                                   ^ Status            ^
+| Messegelände / Wallersheimer Kreisel  | D. Koenitz GmbH  | Koblenz  | [[projekte:fluechtlingsheim_containerdorf]]  | online mit ffmyk  |
+| Rauental                              | Stadt Koblenz    | Koblenz  |                                              | online (Stadt)    |
+| Niederberger Höhe                     | ?                | Koblenz  | [[standorte/st_pankratius]]                  | unbekannt         |
+| Asterstein                            | LFKS             | Koblenz  |                                              | online mit ffmyk  |
+| Güls                                  | ?                | Koblenz  |                                              | online mit ffmyk  |
+
+Quelle für die Unterkünfte in Koblenz: [[https://www.koblenz.de/wirtschaft_verkehr/k31_sst_fluechtling_unterkuenfte.html|Stadt Koblenz]]
+
+{{tag>Refugees}}

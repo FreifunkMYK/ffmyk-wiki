@@ -1,0 +1,7 @@
+====== Index ======
+{{pagequery>;sort=ns,title;proper;display={title};group;inwords;cols=3;border=both border;hidestart}}
+
+
+
+
+~~NOCACHE~~

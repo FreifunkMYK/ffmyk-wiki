@@ -1,0 +1,35 @@
+====== Liebfrauenkirche ======
+[{{ :standorte:liebfrauen_kirche_img_20151103_134635.jpg?200|Hintergrund: Liebfrauenkirche. Davor: Im 2.OG des Erkerfensters: Ein WR841N v9 in einer Tupperbox}}]
+  * Koordinaten: 50.3609148,7.595302
+  * Karte: [[http://www.openstreetmap.org/?mlat=50.3609148&mlon=7.595302&zoom=16#map=16/50.3609148/7.595302|OSM]]
+  * Ansprechpartner: rfelten ( robert.felten+freifunk-myk ät googlemail PUNKT com  )
+  * Anbindung: 16/1 Mbit DSL
+  * Abdeckung: Vorplatz zur Liebfrauenkirche, Teile des Münzplatz, Straße "An der Liebfrauenkirche"(vollständig). Siehe Heatmaps unten
+
+====== Aufbau =====
+[{{ :standorte:liebfrauenkirche_richtung_muenzplatz_img_20151111_163137.jpg?200|Sicht des ersten APs in Richtung Münzplatz}}]
+[{{ :standorte:liebfrauenkirche_richtung_lfkvorplatz_img_20151115_105732.jpg?200|Sicht des zweiten APs in Richtung [[https://de.wikipedia.org/wiki/Liebfrauenkirche_%28Koblenz%29|LFK]]-Vorplatz. Im Hintergrund: 5GHz Schüsseln am Schlängel Center."}}]
+Der Standort besteht aus zwei TP-WR841N v9 jeweils kostengüstig per Tupperbox outdoor-fähig gemacht. Beide sind vor den Fenstern im 2.OG angebracht. Einer Richtung Münzplatz, der andere Richtung Liebfrauenkirche. Bei erstem hat eine Antenne einen "Windsurfer Antenna"-Reflektor ([[http://www.aegisarts.com/wifi/ez12.pdf|pdf]]) spendiert bekommen. Für eine Vorher/Nachher Messung siehe Abschnitt "Ausleuchtung".
+
+Der zweite TP-WR841v9 leuchtet in Richtung der [[https://de.wikipedia.org/wiki/Liebfrauenkirche_%28Koblenz%29|Liebfrauenkirche]] / Vorplatz zur Liebfrauenkirche. Damit sind auch Teile des bevorstehenden [[http://www.weihnachtsmarkt-koblenz.de/de/was-finde-ich-wo.html|Koblenzer Weihnachtsmarkt]] abgedeckt.
+
+====== Config =====
+  * 2x Glucon 0.7-stable-2015-09-09
+  * Mesh-on-Lan via Konsole aktiviert, vgl https://wiki.freifunk.net/Konsole#Meshing_on_LAN
+
+====== Ausleuchtung =====
+Alle Messungen wurden mit der Android App "Wi-Fi Coverage Mapper" ( im [[https://play.google.com/store/apps/details?id=pl.ntek.wcm&hl=de|Play Store]]) auf einem Nexus 4 (LG-E960) durchgeführt. Das Smartphone wurde dabei jeweils in Richtung des AP gehalten, so dass der Träger nicht das Signal dämpfte.
+
+
+[{{:standorte:liebfrauenkirche_2ap.png?600|Aktuelle (Mitte Nov. 2015) Ausleuchtung am Standort mit zwei APs: Wie gewünscht verbessert der 2. AP den Empfang am LFK-Vorplatz.}}]
+
+[{{:standorte:liebfrauenkirche_1ap_ohne_windsurfer.png?300|Nur der erste AP, ohne Windsurfer-Reflektor}}]
+
+[{{:standorte:liebfrauenkirche_1ap_mit_windsurfer.png?300|Nur der erste AP, mit Windsurfer-Reflektor. Wie zu erkennen ist, verschiebt sich bei Verwendung der "Windsurfer" der Bereich mit der Signalstärke "grün" wie gewünscht in Richtung Münzplatz.}}]
+
+
+
+
+Durchsatzmessungen stehen noch an.
+
+{{tag>Standorte}}

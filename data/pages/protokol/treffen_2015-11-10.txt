@@ -1,0 +1,56 @@
+====== Treffen 2015-11-10 ======
+
+Kopie von https://pad.freifunk.net/p/ffmyk-20151110
+
+Treffen am 10.11.20115
+
+  * 19:31 Noch fehlen 6 Freifunker die Zugesagt haben!
+  * 19:35 nur noch 4 fehlen...
+  * 19:37 nur noch 3 fehlen....
+  * 20:41 alle da7
+
+  * Themen:
+  * Begrüßung + Vorstellungsrunde ✓
+  * Ausfallberichte ✓
+  * Essenspause! ✓
+  * Neustrukturierung Freifunk-MYK?! -> siehe unten ✓
+  * Status Umstrukturierung der Webseite ✓
+  * Processwire: http://processwire.com/ --- http://processwire.freifunk-myk.de
+  * Beispiel: http://elmsln.readthedocs.org/en/latest/
+  * https://gluon.readthedocs.org/en/v2015.1.2/
+  * Lagebericht Freifunk in Flüchtlingsunterkünften ✓
+  * Firmware ✓
+  * Datenschutzvereinbarung ✓
+  * Umbauten Buildserver, Mapserver, fastd1✓
+  * Neuerungen Anstehender Firmware✓
+  * Unterschied der beiden Meshviewer
+  * http://ffmyk.niyawe.de/status/
+  * http://status.freifunk-myk.de/
+  * Autoupdater✓
+  * TODO: 2015.2 Tab prüfen
+  * ML ✓
+  * Pressearbeit -> Elias & auf Anfrage
+
+
+  * Die Umfrage zum nächsten FFMYK Treffen findest du hier: http://doodle.com/poll/uaffqmz9ge762axg
+
+  * Namensbrainstorm:
+    * nerd
+    * world
+    * Rheinland-Pfalz Nord
+    * Nördliches Rheinland-Pfalz (ff-nrlp)
+    * rlp0++
+    * rlp1
+    * Freifunk Vulkangebiet
+    * Vulkanfunk
+    * pFFerd <- Herleitung?
+   
+  * 25.11.2015 19-21 Uhr  im Pfarrsaal St. Medard, Kirchplatz 16, 56170 Bendorf
+  * Teilnehmer:
+    *     Sebastian
+    *     Ansgar
+    *     Robert (falls er in KO ist)
+  * ACHTUNG: Überschneidung mit einem Doodle-Vorschlagstermin (Sebastian muss aktualisieren)
+
+
+{{tag>Protokoll}}

@@ -1,0 +1,15 @@
+====== TP-Link Geräte mit Freifunk-Firmware Flashen ======
+
+Die meisten Freifunker im Umkreis verwenden Router des Herstellers TP-Link, die in der Regel kostengünstig erhältlich sind.
+Von TP-Link sind verschiedene Modelle auf dem Markt, bisher sind in unserer Community die Geräte TL-WDR4300 und TL-WR841N am beliebtesten.
+Der Installationsprozess der Freifunk-Firmware ist jedoch auf allen TP-Link Geräten so gut wie identisch.
+Im Folgenden beschreibe ich die Instllation auf einem TL-WA860RE, einem einfachen WLAN-Repeater, aber lass Dich nicht irritieren, wie gesagt, die Prozedur ist auf den TP-Link Geräten fast identisch.
+Neben dem Gerät selbst benötigst Du in zu dem jeweiligen Gerät passendes Firmware-Image und ein paar Minuten Zeit.
+
+=== Vorbereitung: Zugang zum Netz des Routers verschhaffen===
+Falls Dein  Router bevor du zum Freifunk gefunden hast verwendet wurde, ist der Zugang zum Router bereits konfiguriert. In der Regel ist Dein Rechner entweder per LAN-Kabel oder per WLAN mit dem Router verbunden.
+
+Ist der Router neu und unbenutzt, ist der Zugang mittels LAN-Kabel am einfachsten herzustellen. Im Fall des Repeaters TL-WA860RE wird beim ersten Anschließen ein unverschlüsseltes WLAN mit der SSID "TP-LINK_Extnder_XXXXXX" angeboten über das die Konfigurationsoberfläche des Geräts zugänglich ist.
+
+=== Das Flashen der Freifunk-Firmware ===
+

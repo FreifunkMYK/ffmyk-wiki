@@ -1,0 +1,90 @@
+====== Satzung (ENTWURF) ======
+
+
+Vereinssatzung
+<Name des Verreins>
+xx.Januar 2016
+
+
+§ 1 Name, Sitz, Geschäftsjahr
+
+  * (1) Der Verein führt den Namen „<Name des Verreins>“. Er soll in das Vereinsregister eingetragen werden und führt danach den Zusatz “e. V.“ 
+  * (2) Der Sitz des Vereins ist Koblenz.
+  * (3) Das Geschäftsjahr des Vereins ist das Kalenderjahr. 
+
+§ 2 Zweck 
+
+  * (1) Zweck des Vereins ist die Förderung und der Betrieb kabelloser und kabelgebundener Computernetzwerke, die der Allgemeinheit zugänglich sind (freie Netzwerke), insbesondere Freifunk-Netzwerke in der Region Koblenz und Mayen.
+  * (2) Der Verein verfolgt ausschließlich und unmittelbar gemeinnützige Zwecke im Sinne des Abschnitts „Steuerbegünstigte Zwecke“ der Abgabenordnung.
+  * (3) Der Satzungszweck wird verwirklicht insbesondere durch folgende Maßnahmen:
+    * a) Information der Mitglieder, der Öffentlichkeit und interessierter Kreise über freie Netzwerke, insbesondere durch das Internet und durch Vorträge, Veranstaltungen, Vorführungen und Publikationen;
+    * b) Bereitstellung von Know-How über Technik und Anwendung freier Netzwerke;
+    * c) Unterstützung des Betriebs freier Netzwerke;
+    * d) Förderung und Unterstützung von Projekten und Initiativen, die in ähnlichen Bereichen tätig sind oder denen die Idee freier Netzwerke näher gebracht werden soll.
+  * (4) Der Verein ist selbstlos tätig; er verfolgt nicht in erster Linie eigenwirtschaftliche Zwecke.
+  * (5) Mittel des Vereins dürfen nur für die satzungsmäßigen Zwecke verwendet werden. Die Mitglieder erhalten keine Gewinnanteile und in ihrer Eigenschaft als Mitglieder auch keine sonstigen Zuwendungen aus Mitteln des Vereins. Es darf keine Person durch Ausgaben, die dem Zweck des Vereins fremd sind, oder durch unverhältnismäßige hohe Vergütungen begünstigt werden. Alle Inhaber von Vereinsämtern sind ehrenamtlich tätig.
+  * (6) Jeder Beschluss über die Änderung der Satzung ist vor dessen Anmeldung beim Registergericht dem zuständigen Finanzamt vorzulegen. 
+
+§ 3 Mitgliedschaft
+
+  * (1) Mitglieder des Vereins sind ordentliche Mitglieder, Ehrenmitglieder und Fördermitglieder. Ordentliche Mitglieder und Ehrenmitglieder sind aktiv und in der Mitgliederversammlung stimmberechtigt. 
+  * (2) Ordentliches Mitglied des Vereins kann jede natürliche Person werden, die Bürger der Europäischen Union ist und ihren ständigen oder zeitweiligen Wohnsitz in der Bundesrepublik Deutschland hat und die Satzung des Vereins anerkennt. 
+  * (3) Über die Aufnahme entscheidet nach schriftlichem Antrag gem. § 126b BGB der Vorstand. Bei Minderjährigen ist der Aufnahmeantrag durch die gesetzlichen Vertreter zu stellen. Lehnt der Vorstand die Aufnahme ab und der Aufnahmeantrag wird aufrecht erhalten, entscheidet generell die Mitgliederversammlung endgültig über die Aufnahme. 
+  * (4) Der freiwillige Austritt aus dem Verein ist zum Monatsende unter Einhaltung einer Frist von zwei Wochen zulässig. Er muss in Textform gem. § 126b BGB gegenüber dem Vorstand erklärt werden. 
+  * (5) Ein Mitglied kann aus dem Verein ausgeschlossen werden, wenn sein Verhalten in grober Weise gegen die Interessen des Vereins verstößt. Über den Ausschluss entscheidet die Mitgliederversammlung. 
+  * (6) Die Mitgliedschaft endet mit dem Tod des Mitglieds.
+  * (7) Das ausgetretene oder ausgeschlossene Mitglied hat keinen Anspruch gegenüber dem Vereinsvermögen.
+
+§ 4 Mitgliedsbeiträge
+  * (1) Von den Mitgliedern werden Beiträge erhoben. Die Höhe des Jahresbeitrags und dessen Fälligkeit werden von der Mitgliederversammlung bestimmt.
+  * (2) Ehrenmitglieder sind von der Beitragspflicht befreit.
+
+§ 5 Organe des Vereins
+
+Die Organe des Vereins sind
+  * a) die Mitgliederversammlung und
+  * b) der Vorstand.
+
+§ 6 Vorstand 
+
+  * (1) Der Gesamtvorstand des Vereins besteht aus dem 1. Vorsitzenden, dem 2. Vorsitzenden, dem Schatzmeister und dem Schriftführer. 
+  * (2) Der Vorstand im Sinne des § 26 BGB besteht aus dem 1. Vorsitzenden und dem 2. Vorsitzenden. Jeder von ihnen vertritt den Verein einzeln. 
+  * (3) Der Vorstand wird von der Mitgliederversammlung auf die Dauer von zwei Jahren gewählt; er bleibt jedoch so lange im Amt bis eine Neuwahl erfolgt ist. 
+  * (4) Vorstandsmitglieder können jederzeit von ihrem Amt zurücktreten.
+  * (5) Bei Rücktritt oder andauernder Ausübungsunfähigkeit von Vorstandsvorsitzendem, Schatzmeister oder Schriftführer ist der gesamte Vorstand neu zu wählen. Bis zur Wahl eines neuen Vorstands ist der bisherige Vorstand zur bestmöglichen Wahrnehmung seiner Aufgaben verpflichtet. 
+  * (6) Die Vorstandsmitglieder sind grundsätzlich ehrenamtlich tätig. Sie haben Anspruch auf Erstattung notwendiger Auslagen, deren Rahmen von der Geschäftsordnung festgelegt wird. 
+
+§ 7 Mitgliederversammlung
+
+  * (1) Die ordentliche Mitgliederversammlung findet einmal jährlich statt. Außerdem muss eine Mitgliederversammlung einberufen werden, wenn das Interesse des Vereins es erfordert oder wenn mindestens 1/10 der Mitglieder die Einberufung schriftlich unter Angabe des Zwecks und der Gründe verlangt. 
+  * (2) Jede Mitgliederversammlung ist vom Vorstand per E-Mail unter Einhaltung einer Einladungsfrist von vier Wochen und unter Angabe der Tagesordnung einzuberufen. 
+  * (3) Versammlungsleiter ist der 1. Vorsitzende und im Falle seiner Verhinderung der 2. Vorsitzende. Sollten beide nicht anwesend sein, wird ein Versammlungsleiter von der Mitgliederversammlung gewählt. Soweit der Schriftführer nicht anwesend ist, wird auch dieser von der Mitgliederversammlung bestimmt. 
+  * (4) Jede ordnungsgemäß einberufene Mitgliederversammlung ist ohne Rücksicht auf die Zahl der erschienenen Mitglieder beschlussfähig. 
+  * (5) Die Beschlüsse der Mitgliederversammlung werden mit einfacher Mehrheit der abgegebenen gültigen Stimmen gefasst. Zur Änderung der Satzung und des Vereinszwecks ist jedoch eine Mehrheit von ¾ der abgegebenen gültigen Stimmen erforderlich. 
+  * (6) Über die Beschlüsse der Mitgliederversammlung ist ein Protokoll aufzunehmen, das vom Versammlungsleiter und dem Schriftführer zu unterschreiben ist. 
+  * (7) Näheres regelt die Geschäftsordnung der Mitgliederversammlung.
+
+§ 8 Auflösung, Anfall des Vereinsvermögens
+
+  * (1) Zur Auflösung des Vereins ist eine Mehrheit von 4/5 der abgegebenen gültigen Stimmen erforderlich. 
+  * (2) Bei der Auflösung oder Aufhebung des Vereins oder bei Wegfall steuerbegünstigter Zwecke fällt das Vermögen des Vereins zwecks Verwendung für die Förderung der Bildung im IT-Bereich in Rangfolge an
+
+  * a) den Förderverein Freie Netzwerke e.V. mit Sitz in Berlin,
+  * b) eine juristische Person des öffentlichen Rechts oder
+  * c) eine andere steuerbegünstigte Körperschaft.
+
+Ist ein in dieser Aufzählung Begünstigter keine gemeinnützige Körperschaft, so fällt dieser Begünstigte aus der Liste der Begünstigten raus.
+
+  * (3) Sofern die Mitgliederversammlung nichts anderes beschließt, sind die Vorsitzenden gemeinsam vertretungsberechtigte Liquidatoren. Die vorstehenden Vorschriften gelten entsprechend für den Fall, dass der Verein aus einem anderen Grund aufgelöst wird oder seine Rechtsfähigkeit verliert.
+
+§ 9 Schriftform
+	
+Schriftliche Erklärungen im Sinne dieser Satzung können auch elektronische Dokumente sein. Die Geschäftsordnung bestimmt Anforderungen, Zustellwege und Zuordnung derartiger Dokumente. 
+
+
+
+Koblenz, xx.xx.2016
+
+Unterschriften von mindestens sieben Mitgliedern, die an der Gründung des Vereins teilgenommen haben 
+
+{{tag>Verein}}

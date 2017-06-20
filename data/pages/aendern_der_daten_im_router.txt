@@ -1,0 +1,14 @@
+====== Ändern der Daten im Router ======
+
+Möchtest Du die Daten, wie zum Beispiel die Koordinaten, ändern musst Du zuerst dein Router in den "Config Mode" versetzten. Das geht ganz einfach. \\
+
+
+Starte dein Router falls der nicht an ist. Warte bis der Router betriebsbereit ist. Trenne alle Netzkabel.\\
+Drücke auf der Rückseite (meinst in der Nähe der LAN Ports) den Reset Knopf für ca 5 Sekunden. Der Router startet dann nach einigen Sekunden neu. Warte bis der Router neu gestartet ist.\\
+{{:wiki:reset.jpg?400|}}
+
+Verbinde jetzt dein PC mit einem LAN Port (gelb). Warte einige Sekunden. Öffne dann dein Browser und rufe die Seite http://192.168.1.1 auf. Es sollte dann die Konfiguration aufgerufen werden.\\
+Jetzt kannst Du die Daten ändern. Nach dem Speichern startet der Router wieder in den normalen Modus. Verbinde jetzt wieder alle Kabel wie vorher.\\
+Du kannst diesen Vorgang immer wieder wiederholen. 
+
+

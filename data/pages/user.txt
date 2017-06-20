@@ -1,0 +1,7 @@
+{{pagequery>@user *;
+sort=cyear,cdate,name;
+col=2;
+snippet=tooltip;
+proper=name;
+display={cdate} - {name}; 
+group;}}

@@ -1,0 +1,69 @@
+====== St. Pankratius, KO-Niederberg ======
+[{{ :standorte:st_pankratius_01_koblenz_2014.jpg?200|Die St. Pankratius Kirche in KO-Niederberg. [[https://de.wikipedia.org/wiki/St._Pankratius_%28Koblenz%29|Bildquelle]]}}] 
+  * Koordinaten: 50.37092, 7.62804
+  * Karte: [[http://www.openstreetmap.org/?mlat=50.37092&mlon=7.62804zoom=16|OSM]]
+  * Ansprechpartner: Ivo, rfelten, kreativmonkey
+  * Anbindung: Geplant: 50Mbit Cable via Ivo
+  * Abdeckung: Geplant: 2.4Ghz Süd-Westliches Niederberg (Hanglage) sowie direkter Umkreis. 5Ghz-Backbone Links möglich.
+
+[[https://de.wikipedia.org/wiki/St._Pankratius_%28Koblenz%29|St. Pankratius]] ist eine Kirche in Niederberg. Ivo hat Kontakte zur Pfarrgemeinde und schlug beim Treffen am 25.11.2015 vor, den Kirchturm - insbesondere im Hinblick auf die geplanten Flüchtlingsunterkünfte in Niederberg zuverfreifunken. 
+
+Die Kirche hat einen Glockenraum sowie ein Spitzdach aus Holz. Aus dem Glockenraum gehen jeweils zwei Öffnungen ziemlich genau in jede der vier Himmelsrichtungen. Die Öffnungen sind Schallführungen aus Holz versehen. Fotos siehe unten.
+
+===== Vorschläge zur Erschließung =====
+Als problematisch wird die (denkmalgerechte) Befestigung von APs gesehen. Um //vor// die Schallführungen zu kommen, müsste die eine Leiste abgeschraubt werden (tw. gesägt) und mit ein U-förmigen Winkel o.ä. der AP davor gesetzt werden. 
+Alternativ funkt man durch die Schallführungen, was jedoch Leistungseinbußen führt.
+
+Möglicherweise bietet es sich an, den Standort - wenn der Kirchenrat zustimmt - mehrstufig auszubauen und erstmal mit einem weniger invasiven Setup anzufangen.
+
+==== Vorschlag: "kleines Setup" ====
+[{{ :standorte:st_pankratius_kleiner_ausbau_schematisch_2.png?200|Kleines Setup: Ein 5GHz Backbone versorgt drei 2.4GHz-Sektoren im Kirchturm.}}]
+
+Im "Kleinen Setup" sind sämtliche APs sind im Inneren der Kirche, d.h. hinter den Schallführungen angebracht. Dadurch ist zwar mit Leistungseinbußen zu rechnen, jedoch wird dadurch vermutlich die Akzeptanz im Kirchenrat erhöht sowie der initiale Installationsaufwand (kein Gesäge, kein Latten abnehmen) reduziert. Besser ein kleiner Standort der ausgebaut werden kann, als gar kein Standort :)
+
+Funktechnisch kleine Setup sieht einen 5GHz AP mit moderater Richtwirkung nach Süden (Richtung Ivo's Haus) vor, z.B. eine CPE510. Auf Ivo's Dach ist die passende Gegenstelle im Client-Mode. Dieser Backbone-Link sollte genug Bandbreite haben um vier Sektoren die Teilnehmer im 2,4GHz Band versorgen, anzubinden. Das Teilnehmernetz im 2.4GHz Band anzusiedeln hat den den Vorteil, dass die Anzahl der erreichten Nutzer höher ist (weil verbreiteter als 5GHz) und die "niedrige" Frequenz weniger durch die Schallführungen gedämpft wird.
+Die Sektoren (z.b. CPE210) laufen im AP Betrieb und haben die Mesh-Funktion deaktiviert. Durch diese point-to-multi-point Konfiguration soll erreicht werden, dass der Medienzugriff zentral koordiniert ist (CTS/RTS). Dadurch sollten Paketverluste geringer (und damit auch die Bandbreite höher) sein, als wenn der unkoordinierte Mesh-Modus aktiviert ist.
+
+Aus den Fotos (s.u.) ist ersichtlich, dass im Süden sowie im Westen die meisten Häuser stehen. Im Osten ist quasi nur eine Straße zu sehen, jedoch mit einer frequentierten Bushaltestelle. Da das 2.4Ghz Band nach 11n vier nicht überlappende 20Mhz Kanäle hat, bietet es sich an, jede Himmelsrichtung einen AP 
+
+Falls das Freifunk-Netz in KO-Niederberg angenommen/genutzt wird, werden vermutlich nach und nach Menschen auf uns zukommen. In Abstimmung mit der Kirchengemeinde könnte der Standort dann erweitert werden, bspw. 5Ghz Links zu der geplanten Flüchtlingsunterkunft, interessierten Schulen, Sportvereinen und Bürgern, welche auf der anderen Seite der Links wiederum 2.4Ghz Sektoren betreiben.
+
+Als Hardware kommen in Frage:
+  * 5Ghz Backbone: [[http://www.tp-link.com/at/products/details/?model=CPE510#spec|CPE510]]. Diese [[http://www.tp-link.com.tr/resources/document/cpe510_ce_doc.pdf|erfüllen]] die [[http://www.bundesnetzagentur.de/SharedDocs/Downloads/DE/Sachgebiete/Telekommunikation/Unternehmen_Institutionen/Frequenzen/Allgemeinzuteilungen/2010_07_WLAN_5GHz_pdf.pdf?__blob=publicationFile|geforderten Normen (EN 301 893)]] (TPC/DFS). Dual Polarisierend mit ~45° Öffnungswinkel. Betrieb mit der Herstellerfirmware erforderlich wgn. Anforderungen aus EN 301 893.
+  * 2.4GHz Teilnehmernetz: [[http://www.tp-link.de/products/details/?model=CPE210|CP210]] oder Nanostation LocoM2. beide ca 60° Öfnungswinkel. Betrieb mit unserer [[http://firmware.freifunk-myk.de/stable/0.7-2015-09-09/factory/|FF-FW]].
+
+IP Konfiguration
+  * Es würde sich anbieten, auf einer der FF-Nodes im Kirchturm den DHCP für die Teilnehmer zu betreiben und nicht erst "hinter" dem Uplink. Somit wäre der Standort unabhängiger vom der Funktion des Uplinks. Diese Node macht dann auch die batman Annonces.
+  *  Details sind noch festzulegen
+
+===== Weitere Schritte =====
+Ivo stellt Kontakt zu Vorstand her, wo wir das Vorhaben gemeinsam mit ihm vorstellen.
+
+===== Begehung ====
+Am 26.11.2015 fand eine Begehung des Kirchturms durch Ivo, kreativmonkey und rfelten statt. Dabei wurden Zahlreiche Fotos gemacht. Eine Verbindung zu Ivo's 841er (Outdoorbox auf dem Dach) wurde erfolgreich hergestellt.
+
+[{{:standorte:img_20151125_104946.jpg?300|Glockenraum: Links. Es ist ziemlich eng}}]
+[{{:standorte:img_20151125_104949.jpg?300|Glockenraum: Mitte}}]
+[{{:standorte:img_20151125_104951.jpg?300|Glockenraum: Rechts. Leiter führt in die Holzkuppel}}]
+[{{:standorte:img_20151125_105129.jpg?300|Holzkuppel: Eine Steckdose vorhanden, eine Dachluke, keine Öffnungen.}}]
+
+[{{:standorte:img_20151125_105000.jpg?300| Detail Befestigung Schallführungen: Von Innen Verschraubt, jedoch nicht abnehmbar.}}]
+[{{:standorte:img_20151125_105622.jpg?300|Glockenraum: Doppelsteckdose vorhanden, funktion nicht geprüft}}]
+[{{:standorte:img_20151125_110458.jpg?300|Blick nach Süden 1}}]
+[{{:standorte:img_20151125_110522.jpg?300|Blick nach Süden 2}}]
+[{{:standorte:img_20151125_110538.jpg?300|Blick nach Westen 1}}]
+[{{:standorte:img_20151125_110730.jpg?300|Blick nach Westen 2}}]
+[{{:standorte:img_20151125_110746.jpg?300|Blick nach Westen 3}}]
+[{{:standorte:img_20151125_110908.jpg?300|Blick nach Norden 1}}]
+[{{:standorte:img_20151125_110920.jpg?300|Blick nach Norden 2}}]
+[{{:standorte:img_20151125_110943.jpg?300|Blick nach Norden 3}}]
+[{{:standorte:img_20151125_111024.jpg?300|Blick nach Norden 4}}]
+[{{:standorte:img_20151125_111048.jpg?300|Blick nach Osten 1}}]
+[{{:standorte:img_20151125_111048.jpg?300|Blick nach Osten 2}}]
+[{{:standorte:img_20151125_111101.jpg?300|Blick nach Osten 3}}]
+
+
+
+
+
+{{tag>Standort}}

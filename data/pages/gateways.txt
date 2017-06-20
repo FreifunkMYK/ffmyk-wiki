@@ -1,0 +1,15 @@
+^ Server        ^ Standort                    ^ OS                  ^ Dienste         ^ Betreiber   ^ Uplink               ^ Fastd-Schlüssel                                                   ^
+| fastd1        | OVH Roubaix, Frankreich     | Arch Linux          | DHCP, DNS, NTP  | Adlerweb    | mullvad (adlerweb1)  | d78c8c9b2977f732cdd00d2d4b557cfb5de1438897d33b9ec04037512dd11d6a  |
+| fastd2        | Hetzner   | Arch Linux          | DHCP, DNS, NTP  | ansgar  | mullvad (adlerweb2)  | f753af06aff1e765a0601c21343965cd3a9abd91f98a76867589e742c041a550  |
+| fastd3        | OVH Straßburg, Frankreich   | Arch Linux          | DHCP, DNS, NTP  | ataflinski  | mullvad (niyawe1.2)  | 70a561adcea747e4758376222cddf7d43db43fac55b43e3840b6e3bc5042b170  |
+| fastd4        | Hetzner                     | Arch Linux          | DHCP, DNS, NTP  | niyawe      | mullvad (niyawe1.1)  | 30e707472d8eed4397295554764846f309a4b046ba628d24f2acee79543d671c  |
+| [off] fastd5        | OVH Gravelines, Frankreich  | Arch Linux          | DHCP, DNS, NTP  | ataflinski  | mullvad (niyawe1.3)  | c785f8d8f59b75ffbec7eb417e1971dc5a123ff3507e3121352102fdea646e89  |
+| fastd6 (ARM)  | Scaleway Paris, Frankreich  | Ubuntu Linux (ARM)  | [in Arbeit]     |             |                      |                                                                   |
+| fastd7        | Hetzner                     | Arch Linux          | DHCP, DNS, NTP  | niyawe      | mullvad (niyawe2.3)  | 72dbb9f07c272e6cfba07ebc3e318cc66e7d6e7583d6aa27fdd0445cf1bea2d8|
+| fastd8        | Hetzner                     | Arch Linux          | DHCP, DNS, NTP  | niyawe      | mullvad (niyawe2.1)  | 66744cda306b1087753a57a727c79a934c872e7221ec6a28ff41e3a316eff0ab  |
+| fastd9        | Hetzner                     | Arch Linux          | DHCP, DNS, NTP  | niyawe      | mullvad (niyawe2.2)  | a8a79387ffa4370c6ae322d99aeb5b8b82f5580ce8dfe5726e0d161a7894a6ed  |
+
+Anbieterhinweise:
+
+  * Netcup: Bei viel UDP-Traffic erfolgt kündigung
+  * OVH: Bei vServern greift der DDoS-Schutz bei vielen UDP-Paketen. Onlineschaltung nur durch betteln an der Hotline.

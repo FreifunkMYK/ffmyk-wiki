@@ -1,0 +1,13 @@
+# Acronyms.
+
+Gateway		Verbindet Rechennetze mit unterschiedlichen Protokollen
+Mesh		Eine Netzwerkwolke bei der sich viele Router untereinander Verbinden.
+Supernode	Ein Zentraler Knoten im Netzwerk
+VPN		Virtual Private Network (Verschlüsselte Verbindung zwischen zwei Routern) 
+Host            
+ad-hoc          Eine Verbindung zwischen mehreren Knoten ohne Zentrale
+Node            Ein Knoten im Netzwerk nennt man Node
+Knoten          
+Client          Ein Router/Benutzer im Netzwerk
+Uplink          Eine Verbindung in andere Netze (z.B. Internet)
+Link            

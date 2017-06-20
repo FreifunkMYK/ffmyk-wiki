@@ -1,0 +1,69 @@
+====== Treffen 2016-03-01 ======
+
+  * Vorstellungsrunde: Niklas, Florian, Christoffer, Christoph, Michael, Ansgar, Shiv Gandi, Björn, Franziskus, Axel
+  * Protokoll: Ansgar
+  * Ich Bitte alle darum ihre Namen oben rechts ein zu tragen. Damit lässt sich leichter nach vollziehen wer was geschrieben hat ;-).
+
+ - Vorstellungsrunde
+
+====== Oberwesel (Franziskus) ======
+(Reaktionen auf Artikel in der Rhein-Zeitung) Morgen, am 2.3.2016 findet ein Treffen der Oberweseler Gewerbetreibenden statt, bei dem unter anderem über Freifunk für die Oberweseler Innenstadt gesprochen wird.- Björn ist dort ebenfalls um Franziskus bei der Beantwortung von Fragen zum Freifunk zu unterstützen
+
+====== Diskussion zur MTU ======
+
+    MTU bezeichnet maximale Paketgröße. WLAN transportiert recht große Pakete, die durch unser Mesh-Protokoll noch um einen sog. Header vergrößert wird. Wenn Die Datenpakete über das VPN zu unseren Gateway-Knoten weitergeleitet werden soll, muss es fragmentiert werden, da die VPN-Tunnel nur eine sehr kleine MTU (1194 Bytes) unterstützen. Bei Mesh-Verbindungen müssen ggf. Pakete schon vor dem VPN fragmentiert werden. Pakete, die bereits fragmentiert sind, werden beoi der Übergabe an den VPN-Tunnel kein zweites Mal fragmentiert, sondern verworfen.
+
+====== Michael und Ansgar waren bei den Freifunk Rheinland Routing Days in Herne ======
+
+  * Einblick in die von Freifunk Rheinland verwendeten Routingverfahren
+  * Uplink in Richtung Frifunk Rheinland möglich.
+  * Die Technik-Runde wird sich u den Routing-Möglichkeiten innerhalb unseres Netzes noch außerhalb dieser Sitzung beraten.
+
+====== netmon als Statusseite ======
+  * Link?  https://git.nordwest.freifunk.net/netmon/netmon
+  * Was spricht gegen munin/vnstat/grafana/etc? Sind verbreiteter…
+  * (Florian) Hab da etwas ähnliches mit Stats hier laufen - kann ich mal ins Mesh stellen zum Testen
+    * Scheint großteils zur Verwaltung zu sein - Sebastian hat etwas anderes
+  * Nichts - sieht gut aus: hier eine Bsp-Seite: https://netmon.freifunk-franken.de/routerlist.php
+  * Im Rahmen unserer neuen Webseite entsteht bereits ein eigenes Management-System
+Wünsche hierzu können gerne an das Webseitenteam geleitet werden (Sebastian und Robert) oder auf Github eingereicht werden: https://github.com/FreifunkMYK/PW-Freifunk-Starter
+
+====== Bericht ToT Berufsschule BNA (Michael) -> Pressemeldung & Blog ======
+  * Zum Tag der offenen Tür wurde an der BBS Bad Neueahr fünf Freifunkouter aufgestellt.
+  * Michael ist im Rahmen der Veranstaltung auch mit MdL's über Freifunk ins Gespräch gekommen.
+  * Auf der Veranstaltung waren im Peak mindestens 38 Clients gleichzeitig im Netz. 
+  * Inzwischen wird die Kreisverwaltung AW mit Freifunkroutern ausgestattet, Ausländerbehörde und Zulassungsstelle sind bereits ausgestattet.
+  * Zum Einsatz kommen TP-Link Archer C7, diese sind dual-Band fähig.
+
+====== Fehlender Code für den neuen Webauftritt (@Florian?) ======
+  * Ja, Florian weiß. (=MTU/Fastd hat Priorität)
+
+====== Handlungsempfehlung für Kommunen ======
+  * Franziskus berichtet über eine Mitteilung des Städte- und Gemeindebundes, die Gemeinden die Kooperation mit- und Unterstützung von Freifunkern ausdrücklich empfiehlt.
+
+====== Shiv fragt nach Hardwareempfehlungen für das Vorhaben, öffentliche Gebäude der Verbandsgemeinde Bad Breisig mit Freifunk zu vernetzen. ======
+  * http://wiki.freifunk.net/Freifunk_Firmware_Gluon/Hardware
+====== Nachfrage SSID regionalbezogene Auswahl ======
+  * Auswahl als Plugin für die Konfigurationsoberfläche ist in Arbeit, jedoch noch nicht in die Firmware-Builds eingeflossen.
+====== Benötigte Portfreigaben ======
+  * Für den Betrieb von Freifunk-Routern müssen an den Firewalls der lokalen Router die Ports 10000/UDP und 10001/UDP freigegeben sein.
+====== Interesse an einem LAB - Basteltag ======
+  * Vorstellung verschiedener Setups (Mesh WLAN/LAN) Offloadertechnik etc.
+  * Richtfunkstrecken...
+  * Anpassungen in Konfig (am Expertmodus vorbei)
+  * Termin ? Ort ? Zeitraum ?
+  * Es erfolgt zur Themensammlung ein Aufruf in der Maillinglist - danach wird der Rahmen klarer
+  * Für Vorträge bietet Florian wie immer Beamer & Aufnahmeequipment 
+
+====== Zusätzliches VPN ======
+Hat jemand von euch auf einem Freifunk-Router zusätzlich einen VPN für das heimische netz am laufen? Wenn ja wie aufwändig ist die Einrichtung?
+Nein, ist auch eher nicht empfohlen
+
+====== Wie Stabil ist die Verbindung heute? Reicht es für Mumble? ======
+Leider nein. Immerhin mit Unterbrechungen fürs Pad
+
+====== (Kann wer vom Tag der offenen Tür berichten? Evtl. noch eine Pressemeldung dazu machen?) ======
+Keine Infos
+
+
+{{tag>Protokoll}}

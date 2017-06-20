@@ -1,0 +1,55 @@
+====== Willkommen beim Wiki von Freifunk-MYK ======
+
+Freifunk ist ein Projekt, das versucht ein lokales Datennetz auf Basis von WLAN-Routern aufzubauen. Dieses Netz soll eine freie Kommunikation innerhalb der ganzen Region und, mithilfe von Peerings zu anderen Freifunk-Communitys, auch überregional ermöglichen. Um dies zu erreichen, werden Freifunkknoten (das sind die Router mit den Antennen), von freiwilligen an vielen Orten in betrieben. Jedes WLAN-fähige Gerät, beispielsweise ein Handy oder Notebook, kann sich in der Nähe eines solchen Knotens mit dem Netz verbinden und darüber mit anderen Teilnehmern kommunizieren. Auch ein Zugang ins Internet steht meistens zur Verfügung.
+{{ vimeo>64814620?medium }}
+
+In diesem Wiki erhalten Sie Informationen zu Begriffen und Technologien rund um Freifunk-MYK.
+===== Treffen =====
+
+Wir treffen uns jeden **1. Dienstag im Monat** um 19:30 im [[http://www.closter-sudhaus.de/|Closter Sudhaus]], Koblenz.
+
+Themen zur Diskussion können vorher gerne im [[https://pad.freifunk.net/p/ffmyk-treffen|ffmyk-treffen-Pad]] gesammelt werden.
+===== Aufbau Freifunk Myk =====
+
+Im Raum Mayen und Koblenz gab es bisher nur wenig Aktivitäten um das Thema Freifunk. Nach Kontakt mit den Freifunkern aus der Region [[http://kbu.freifunk.net/|Köln/Bonn]] entschieden sich einige Interessierte auch hier einen lokalen Ableger zu errichten. Auf dem ersten offiziellen Treffen am 30.10.2014 wurde ein Grundkonzept erarbeitet, seit Anfang 2015 ist eine funktionierende Infrastruktur verfügbar und die ersten Knoten in Betrieb.
+
+Gerne kannst du dich unserem Vorhaben anschließen und uns beim Aufbau eines Freifunk-Netzes in Mayen und Koblenz behilflich sein. Melde dich einfach auf unserer [[http://lists.freifunk.net/mailman/listinfo/mayen-koblenz-freifunk.net|Mailingliste]] oder schau beim nächsten Treffen vorbei.
+
+===== Rechtliches =====
+
+Die erste Frage die sich jedem stellt, wenn er seinen Internetanschluss in Deutschland zur Verfügung stellt, ist die der Störerhaftung. Um dieses Problem zu meiden nutzen wir ein Konzept, welches schon seit Langem erfolgreich in anderen Freifunk-Communitys eingesetzt wird. Hierdurch ist es nicht möglich zu erkennen über welchen Anschluss eine Person in das Internet gelangt ist, da alle Verbindungen über einen gemeinsamen Austrittspunkt geleitet werden. Der Weg bis zu diesem Austrittspunkt ist verschlüsselt und somit nicht einsehbar.
+
+===== Mitmachen =====
+
+Bei Freifunk kann Jeder mitmachen, hierzu benötigst du lediglich einen günstigen Freifunkrouter und ein wenig Platz um diesen aufzustellen.
+
+
+==== Router Aufstellen ====
+
+Um das Freifunk-Netz zu unterstützen, stellen immer mehr Bürger und Unternehmen einen eigenen Freifunk-WLAN-Router zur Verfügung. Diese verbinden sich untereinander und bilden so ein stadtweites, freies Netzwerk. Jeder kann Freifunk nutzen und mitmachen. Die Kosten für einen eigenen Freifunk-Router betragen je nach Routermodell 15 bis 40 EUR (einmalig), hinzu kommen die jährlichen Stromkosten (je nach Router ca. 10-15€).
+
+Eine Liste der für Freifunk empfohlenen Router findest du in der [[https://wiki.freifunk.net/Freifunk_Firmware_Gluon/Hardware|Freifunk-Wiki]].
+==== Freifunk-Router Abholen (empfohlen) ====
+
+Auf unseren Treffen kannst du dir einen fertig eingerichteten Router abholen. Es bietet dir auch die Möglichkeit, bei einem kühlen oder heißen Getränk im Plausch nützliche Tipps zum optimalen Freifunk-Betrieb zu erhalten, Fragen zu klären und die Community hinter Freifunk Mayen-Koblenz kennen zu lernen. Bitte schreib uns im Voraus über die Maillinglist oder die Kontaktadresse an, damit wir alles vorbereiten können.
+
+==== Freifunk-Router selbermachen ====
+
+Natürlich kannst du auch bequem zu Hause deinen eigenen Freifunkknoten basteln: Einfach ein unterstütztes Router-Modell aussuchen, beim Online-Händler deiner Wahl bestellen und in unter 10 Minuten mit unserer Firmware zu einem Freifunkknoten umrüsten.
+
+Seit Anfang 2015 besitzen wir eine eigene [[http://firmware.freifunk-myk.de/|Firmware]]. Eine für diese wurde eine [[http://wiki.freifunk-myk.de/wiki/anleitung|detaillierte Anleitung]] erstellt. Gerne stehen wir auch auf der [[http://lists.freifunk.net/mailman/listinfo/mayen-koblenz-freifunk.net|Mailingliste]] oder den Treffen bei der Einrichtung zur Seite.
+
+Für das nur noch eingeschränkt unterstützte Modell **[[hardware:tp-link_tl-wr841n|TP-Link TL-WR841N]]** (Nachfolger gesucht) gibt es über Youtube zwei hervorragende Anleitungen zu
+
+- [[https://www.youtube.com/watch?v=dI5JcmURtEM|Firmware installieren (Dauer: 6:42 Minuten)]]
+
+- [[https://www.youtube.com/watch?v=tueVWUisvWI|Router richtig einrichten (Dauer: 4:40 Minuten]]]
+==== Mailingliste ====
+
+Die Kommunikation läuft hauptsächlich über unsere Mailingliste - eine Art großer E-Mail-Verteiler. Nachdem du dich [[http://lists.freifunk.net/mailman/listinfo/mayen-koblenz-freifunk.net|auf dieser Seite]] angemeldet hast erhältst du alle E-Mails der Liste.
+
+Wenn du eine neue E-Mail an Alle schreiben möchtest nutze die Adresse  mayen - koblenz @ freifunk . net - möchtest du auf Jemanden antworten verwende die Funktion "Liste Antworten" oder "Allen antworten".
+
+~~NOTOC~~
+
+{{tag>Unsortiert}}

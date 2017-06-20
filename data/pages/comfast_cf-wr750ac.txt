@@ -1,0 +1,77 @@
+(This is a workspace, the device is not supported in any way)
+
+  * Manufacturer: Comfast / Shenzen Four Seas GlobalLink Natwork Technology Co., Ltd.
+  * Model: Comfast CF-WR750AC
+  * [[http://de.aliexpress.com/item/2016-CF-WR750AC-Wifi-Router-Repeater-Dual-External-Antennas-Computer-Networking-Range-Expander-Wireless-750M-Roteador/32686321537.html|20,31€ @ Aliexpress/Comfast (shipped from germany)]]
+
+  * WiFi: 802.11 a/b/g/n/ac
+  * Frequency: 2.4G (2.412-2.484), 5G (5.180-5.825) (Dual Band)
+  * Speed: 750MBit/s (450MBit/s @ 5GHz, 300MBit/s @ 2.4GHt)
+  * Transmit Power: <=100mW (20dBm)
+  * Receiver sensitivity: -90dBm
+  * Antennas: 2 x External, non-detachable, 5dBi +/- .5 dBi + 1 x internal
+
+  * Ethernet: 1x 10/100MBit/s, no Switch IC
+
+  * I/O: 1xWPS/Reset-Button, 3 LED (Power, LAN, WiFi)
+
+  * CPU: 520MHz
+  * RAM: 64MB
+  * Flash: 8MB
+
+  * Size: 95x57x24mm
+  * Weight: 85g
+
+  * Notes:
+  * Internal Power supply for 100-240V~ 50/60Hz, 50mA
+  * Official CE-Mark (at least printed on...)
+  * Serial header already populated and fully silkscreened
+
+----
+
+  * CPU: Realtek RTL8881AN
+    * Lexra RLX5281 MIPS based SoC
+    * Up to 520MHz
+    * Integrated 10/100 5-port-switch (only one port used)
+    * embedded 8MByte RAM
+    * PCI-E host (connected to secondary WiFi)
+    * 1x USB OTF (not connected)
+    * IEEE802.3az
+    * IEEE802.11ac
+    * embedded 5GHz (802.11a/n) PHY
+    * up to 433MBit/s (?!)
+    * 20/40/80MHz bandwidth
+    * Not really much online
+    * Released probaby 2015
+    * Some work already done, but no real success info :/
+      * [[https://yadi.sk/d/gVjsGhsNjhibW|OpenWRT-Build (4.4MB!)]]
+    * 802.11ac support
+    * Looks like there is a linux SDK available
+    * [[https://wikidevi.com/wiki/D-Link_DIR-518L_rev_A1|Also used in D-Link DIR-518L rev A1]]
+      * [[https://translate.google.de/translate?hl=de&sl=en&u=https://wikidevi.com/wiki/D-Link_DIR-518L_rev_A1&prev=search|German translate since idiots at wikidevi are blocking IPs like crazy m(]]
+    * Also used in D-Link DIR-806A
+    * RealTek Bootloader
+      * Serial Console (38400 8N1?)
+      * TFTP-Support
+      * Depending on fuses HTTP and DHCP
+      * can dump current memory and flash
+      * can boot tftp-binary in RAM
+      * can write tftp-binary to flash
+      * [[https://wiki.openwrt.org/doc/techref/bootloader/realtek|Bootloader @ OpenWRT]]
+  * WiFi-Controller: Realtek RTL8192ER
+    * IEEE 802.11a/b/g/n PHY 
+    * 802.11n Draft 2.0 OFDM (BPSK, QPSK, 16QAM, 64QAM, 256QAM)
+    * 2 spatial streams (2T2R; 2x2MIMO)
+    * 2.4GHz, 300Mbps @ 40MHz
+    * Multi BSSID support <- <yay?
+    * [[http://www.realtek.com.tw/products/productsView.aspx?Langid=1&PFid=9&Level=3&Conn=5&ProdID=177|Hersteller]]
+    * //Watnu? 802.11a at 2.4GHz is bullshit. Probably this IC only handles 2.4G while the primary CPU is managing 5G
+  * Board: R116R
+  * RAM: [[http://www.esmt.com.tw/DB/manager/upload/M14D5121632A.pdf|M14D5121632A]]
+    * DDR2
+    * 8Mx16Bitx4Bank -> 512 MBit == 64MByte RAM!
+  * Flash: [[http://www.zlgmcu.com/mxic/pdf/NOR_Flash_c/MX25L6406E_DS_EN.pdf|25L6406E]]
+    * SPI
+    * 64MBit == 8MByte Flash
+
+  * OS: Custom Realtek OK, no OpenWRT/freifunk Gluon (yet?)

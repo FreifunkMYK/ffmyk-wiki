@@ -1,0 +1,21 @@
+====== Router reparieren ======
+
+Geht bei Installation oder Update etwas schief, z.B. weil währenddessen die Stromversorgung unterbrochen wird, kann das Gerät in einen Zustand verfallen, in den keine Funktion mehr feststellbar ist. Hierbei spricht man von einem "Brick" (Ziegelstein). Viele Geräte besitzen jedoch einen Notfallmodus, über den man die vermeindlich defekten Geräte retten kann.
+
+Für TP-Link-Geräte geschieht dies über TFTP, unter Windows kann hierzu der [[http://tftpd32.jounin.net/tftpd32_download.html|TFTPd32]] genutzt werden. 
+
+Im ersten Schritt lädt man sich - analog zur Erstinstallation - die Firmware des Routers herunter, hierbei ist die "Factory"-Variante zu wählen. Die Datei legt man in einen leeren Ordner und benennt sie entsprechend der untenstehenden Tabelle um.
+
+Nun vergibt man dem Rechner auf dem Netzwerkanschluss eine feste IP-Adresse. Die zu verwendende ist je nach Routermodell fest vorgegeben und kann ebenfalls der Tabelle entnommen werden.
+
+Zuletzt startet man den TFTP-Server am Rechner und gibt den Ordner mit der Firmware-Datei als Ordner an.
+
+Eingeleitet wird der Flash-Vorgang durch ausschalten des Routers, gedrückthalten der Resettaste und einschalten. Wenn die Status-LED zu blinken beginnt kann der Reset-Taster losgelassen werden.
+
+^ Router          ^ IP des PCs     ^ Dateiname                 ^ Notiz                                             ^
+| TP-Link WR841   | 192.168.0.66   | wr841nv9_tp_recovery.bin  | v9 muss je nach Hardwareversion angepasst werden  |
+| TP-Link CPE210  | 192.168.0.100  | Recovery.bin              | via Twitter/Bratarrat                             |
+| TP-Link CPE510  | 192.168.0.100  | Recovery.bin              | https://wiki.openwrt.org/toh/tp-link/tl-cpe510    |
+
+
+{{youtube>4K_yL4RlL7c?medium}}

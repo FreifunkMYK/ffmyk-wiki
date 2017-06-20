@@ -1,0 +1,79 @@
+====== FAQ ======
+
+**?** Im Freifunk kann ich einige Dienste wie Amazon Prime Video nicht nutzen
+	Im Freifunk werden zur Sicherheit deines Internetanschluss die Daten umgeleitet. 
+	Einige Dienste versuchen, den Standort über Geo-Tracking zu identifizieren. Für solche Dienste 
+	sieht es aus, als ob du im Ausland bist. Eine einfache Lösung gibt es nicht, um diese Dienste zu nutzen.
+
+**?** Wieso haben die Images so einen Namen ?
+Wenn Du auf unserem Server eine Liste mit Images gefunden hast sollte das in etwa so aussehen :
+
+{{:wiki:firmware.jpg?}}
+
+Die Dateinamen sind immer entsprechend der Syntax aufgebaut :
+
+Gluon - ffmyk - 0.7 - stable – 2015 – xx –xx – tp link tl – wr842n-nd –v9 .bin
+
+  - //GLUON // beschreibt die technische Plattform, in der das Image erstellt wurde
+  - //ffmyk// das Image ist aus der Community FreiFunk MYK.
+  - //Version// des Image
+  - das Image ist eine //stabile// oder //beta// Version
+  - //Datum// des Image
+  - //Hersteller// des Routers
+  - //Typ// des Routers
+  - //Version// des Routers
+
+Dateiendung ist in der Regel .bin (manchmal jedoch auch .iso). In der Liste siehst Du noch das Dateidatum und die Dateigröße in MB.
+Hast du das passende Image für ein Router gefunden, dann lade dieses runter. Wenn Du es hier nicht gefunden hast schau bitte mal unter „beta“ nach.
+
+
+**?** Wie schnell ist das Internet über mein Freifunk Router 
+	Das hängt davon ob, ob Du die Bandbreite in der Firmware eingeschränkt hast. Hast Du den Hacken dort
+	nicht gesetzt, ist das Internet so schnell dein Router die VPN Daten verarbeiten kann. 
+
+**?** Ich finde kein Image für mein Router
+	Siehe Kapitel Image finden und Runterladen
+
+**?** Wie finde ich die Version von meinem Router
+	Diese findest Du meist auf der Verpackung oder auf dem Typenschild direkt auf dem Router.
+{{:wiki:tplink.jpg?}}
+
+**?** Welchen Router soll ich mir kaufen 
+	TP-Link TL-WR1043ND für größere Installationen.
+	TP-Link CPE210 für Richtfunk, Sektorabdeckung und/oder Außeneinsatz.
+	TP-Link TL-WR841N/WR841ND wird nur noch eingeschränkt unterstützt. Die Suche nach einem Nachfolger läuft.
+        
+**?** Kann ich meine Modem, Hausanschluss als Freifunk Router nutzen 
+	Nein, da Freifunk kein eigener Internet Provider ist. 
+
+**?** Was kostet Freifunk 
+	Kosten entstehen dir bei Freifunk nicht. Einzig Stromkosten und Anschaffung für den Router
+	sind mit Kosten verbunden. Der Router kann auch bei uns geliehen werden.
+
+**?** Ich möchte Freifunk auch außerhalb von Gebäuden aufbauen. Geht das
+	Ja, es gibt einige Router die für den Außenbereich geeignet sind. 
+	Auch Richtfunk-Verbindungen über mehre 100 bis 1000 Meter sind möglich. Somit kann
+	Du Freifunk über große Gebiete verteilen. Wenn Du da Interesse hast besuchen uns auf einem
+	unserer Treffen. Wir tauschen gerne Erfahrungen aus und helfen beim Aufbau
+
+**?** Ich komme mit der Anleitung nicht klar. Was nun 
+	Da gibt es Hilfe von uns! Du kannst ganz einfach Kontakt zu uns aufbauen. 
+	Sende uns einfach eine Mail mit deinen Fragen. info@freifunk-myk.de
+	Oder besuche uns auf einem unsere regelmäßigen Treffen. Wir Installieren gerne dein Router für dich.
+
+**?** Kann ich was kaputt machen
+	Wenn Du dich an die Anleitung hältst geht in der Regel nicht kaputt. Wenn dennoch beim Installieren
+	der Software der Router nicht mehr startet kann man meist dennoch den Router reparieren.
+	Trete mit uns in Kontakt. Wir helfen gerne.
+
+**?** Was kann mir beim Installieren noch Hilfreich sein
+	Schau mal hier hier : https://youtu.be/tueVWUisvWI
+	Bitte beachte aber das Du ein Image aus unsere Community braust. Die Installation-Schritte sind
+	aber sonst identisch.
+	Im Internet findest Du auch noch weitere Anleitungen und Tipps
+
+**?** Wofür kann ich den Fernzugriff verwenden?
+
+	Wenn du bei der Installation ein Kennwort oder SSH-Schlüssel vergeben hast kannst du über die IPv6-Adresse deines Routers, welcher z.B. auf unserer Karte angezeigt wird, eine SSH-Verbindung aufbauen. Unter Windows ist z.B. das Programm PuTTY hierzu sehr beliebt. Über die Textkonsole kannst du den Router steuern, die Konfiguration ohne Einschränkungen ändern oder auch eine neue Firmware installieren. Eine komplette Liste der Befehle findest du [[https://github.com/freifunk-gluon/gluon/wiki/Commandline-administration|hier]].
+
+{{tag>Unsortiert}}

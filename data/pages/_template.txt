@@ -1,0 +1,11 @@
+====== Über @!PAGE@ ======
+
+{{ user:image.png}}
+
+^ Name ^ Geburtsdatum ^
+| @USER@ |  |
+
+
+==== Meine Aufgaben in der Community ====
+
+{{tag>Unsortiert}}

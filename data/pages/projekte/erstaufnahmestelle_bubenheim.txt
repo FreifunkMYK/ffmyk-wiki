@@ -1,0 +1,46 @@
+====== Erstaufnahmestelle bubenheim ======
+{{:projekte:bubenheim_vorschlag.jpg?nolink|}}
+Guten Abend,
+Niklas und ich waren gestern die Erstaufnahmestelle in Bubenheim besichtigen.
+Leider gab es vom Land die Anweisung, dass keine Fotos gemacht werden dürfen. Aus diesem Grund haben wir nur die Satellitenbilder und Zeichnungen.
+
+Zur Zeit ist die Aufnahmestelle eine Außenstelle von Ingelheim, sobald jedoch mehr Personen eingezogen sind, wird sie zu einer eigenständigen Aufnahmestelle. Betrieben wird das ganze vom DRK. Derzeit wohnen schon Menschen in Gebäude 50, die anderen Gebäude werden noch renoviert. Fertig sein wird das ganze voraussichtlich Ende März.
+
+Die Internetanbindung ist ziemlich schlecht. Es gibt nur ein langes Kupferkabel, durch das 2Mbit/s A(!)DSL von Vodafone kommt. Als wir gestern da waren, funktionierte der Anschluss noch nicht. Ein Teil der Bandbreite soll für die Verwaltung reserviert werden. Ein weiterer Teil der Bandbreite soll für den Sicherheitsdienst in seinem Gebäude zur Verfügung stehen.
+
+Da die Bandbreite gering ist und der finanzielle Rahmen für Harware bei ungefähr maximal 1200€ liegt, sollte der Fokus erst einmal auf der Ausleuchtung der Gemeinschaftsräume und anschließend der Flure vor den Zimmern liegen. Ich denke, dass das mit unter 1000€ an Hardware möglich sein sollte.
+
+Wir würden die Router auf Vorkasse bestellen, das DRK bezahlt dann die Rechnungen.
+
+---
+
+Es gibt folgende Gebäude:
+Verwaltungsgebäude 4: 2 Stockwerke, in der Mitte des zweiten Stocks steht der Vodafone Router.
+Gebäude 1: Hier wird kein Empfang benötigt, das Gebäude steht leer.
+Gebäude 1a: Gebäude des Sicherheitsdienstes (Die Zufahrtsschranke ist der weiße Punkt).
+Gebäude 2,3: 1 Stockwerk, mehrere große Räume. Nutzung ist noch unklar, wahrscheinlich werden die Räume abgetrennt, damit Menschen dort schlafen können
+Gebäude 5: 1 Stockwerk, Zimmer
+Gebäude 50: 3 Stockwerke. Derzeit noch Essensausgabe im 3. Stockwerk. Mittelfristig wird die Essensausgabe aber in ein beheiztes Zelt auf einem Nachbargrundstück rechts von 1 verlegt.
+Gebäude 18: 1 Stockwerk, Zimmer
+
+---
+
+Wir haben uns ein Konzept für Funkstrecken ausgedacht. Die Gebäude selbst sind untereinander nicht verkabelt und es können keine Kabel gelegt werden. Die Outdoorrouter würden mit einem LAN-Kabel mit Strom versorgt. Diese Kabel werden vom DRK gelegt, wenn wir ihnen sagen, wo wir sie benötigen. Falls nötig können auch noch Steckdosen gesetztz werden, dazu müssen wir aber schnellstmöglich Standorte benennen.
+
+An der Seite des Gebäude 4 Richtung Gebäude 50 sollen 2 CPE510 Router montiert werden. Einer zeigt Richtung 5 & 50, der andere Richtung 2 und 3.
+
+Gebäude 1a soll entweder über Gebäude 2, oder besser noch direkt von Gebäude 4 aus erreicht werden. Dazu kann an der Seite von Gebäude 4 Richtung mittlere Grünfläche noch ein Router montiert werden.
+
+Mit Gegenstellen kommt man auf 10 Outdoor-Router. Bei ca. 60€ für einen CPE510 kommen wir auf 600€
+---
+Da die Bandbreite gering ist, können auch die langsamen 851N Router verwendet werden. Ggf. könnte in Zukunft auch die VPN-Arbeit auch von einem Offloader wie auf dem Asterstein erledigt werden.
+
+Innerhalb der Gebäude braucht man 2-3 Router pro Stockwerk. Zwischen den Stockwerken können wir keine Kabel verlegen, das muss auch per Funk passieren. Eine Alternative wäre dLAN. Das macht insgesamt ca. 21 Router und damit ca. 315€
+---
+Das ist alles ganz schön viel. Zu Beginn sollten wir das Gebäude 50, in dem jetzt schon Menschen wohnen anbinden. Um die Verbindungen zu Testen, könnten wir ggf. auch Router der Hochschulgruppe benutzen, wir haben ja noch ein paar auf Lager.
+
+Was meint ihr? Ist das ganze Machbar?
+
+[adlerweb] Mit 2MBit/s ist surfen schon eng, wenn das noch grdrosselt wird dürfte nach Grundrauschen IMO nicht viel nutzbar sein. Ich würde da wenn überhaupt nur einen Gemeinschaftsraum ausstatten, so spart man sich zumindest rumidlende Geräte.
+
+{{tag>Unsortiert}}

@@ -1,0 +1,93 @@
+====== Treffen 2015-11-25 ======
+https://pad.freifunk.net/p/ffmyk-20151124
+
+(Kopie aus Pad vom 2015-01-06)
+
+Agenda Di, 25. Nov. 2015
+
+Letztes Treffen: https://pad.freifunk.net/p/ffmyk-20151110 - Nächstes Treffen: <tba>
+
+Vorstellungsrunde
+Rolle "Protokolant"
+Taktung Treffen
+Gerflüchteten Unterkunft Niederberg
+Verein / z.b. jählicher Spendenaufuf z.b. um Tunnel zu bezahlen
+Hilfe beim Aufbau neuer Webauftritt
+Status FF-NRLP?
+Bericht: Projekt FFMYK in Virneburg
+Vereinsgründung
+Bericht zum Treffen
+
+Mitschrift
+
+Bericht Infrastruktur-Team (KM, Ansgar, Niklas)
+Axel bietet Rootserver an
+Serverkapazität (CPU, Traffic) zZ ausreichend vorhanden
+Problem eher Tunnel ins Ausland -> Freifunk Rheinland? -> Thema wird bei künftigen Treffen wieder aufgegriffen
+Unklare Probleme mit FF-Map -> low Prio
+Probleme mit Reboot fastd + shared VPN Tunnel ist gefixt
+
+Rolle Protokolant
+Allgemeine Akzeptanz der neuen Rolle
+Achtung: Pads werden nach Zeitraum X automatisch gelöscht -> Ins Wiki portieren
+
+Taktung Treffen
+Problem: Wenig Vorlauf
+Vorschlag: Direkt nach dem Treffen wird ein Doodle erstellt + festen Zeitraum vorher  -> Abgelehnt
+Vorschlag: Fester Termin, alle 4 Wochen (allgemeines Treffen) +sowie Mumble / athoc-Treffen -> Entscheidung: Dienstags, welche Woche -> Doodle -> http://doodle.com/poll/a8677yzi3iqf9atm
+
+Unterkunft Niederberg
+Unterstützer Vorhanden (Ivo): Würde 50Mbit teilen, aber keine Sichtverbindung. Dafür Kontakte zu Kirche in Niederberg sowie Nachbarn (Elektronik.) dieser kann jedoch keinen Uplink stellen Kirchtum zentral im Ort + Hoch -> vermutl. sichtbar in großen teilen von Niederberg. Strom im Dachvorhanden, aber (noch) kein Inet ;)
+Betreiber Kontakt: tba -> 
+Begehung erwünscht + Fotos machen -> Ivo stellt Kontakt zur Kirche her
+Ivo hat Ahnung von Druck & Layout :)
+Begehung 10h30: Ahrenbergerstr/Schnurgasse., an der Kirche
+
+Flugplatz Bengener Heide / Messe Jet-Power (Modellflug-Messe)
+Axel fragt an
+
+Webauftritt
+Wer überarbeitet Texte (insb. Landing-Page) -> Sebastian & Robert
+Prinzipiell kann jeder in den Blog schreiben (gewollt!), relevante Inhalte werden sich finden ;) -> per Checkbox können Blog-Artikel auf Timeline angezeigt werden. Analog: "Presse-Knopf" -> geht über geplanten Presseverteiler. Axel: Beim THW schreiben sie Pressemitt
+Bilder? -> nur Eigene (keine von TP-Link o.ä.)
+Inhalte Router-DB -> Robert erstellt Inhalte, Ivo liest gegen ;)
+Landing-Page: Kurz FF erklären, Anteasern via kurzer Timeline, Aufruf / Links wie man mitmachen/teilhaben kann.
+Vorschlag Ivo: Gegenlesen durch "Technik-Laie"
+Ivo: Es fehlt eine Beschreibung wie man ein Update macht (z.b. via Config-Mode). Geplant: In der neuen Node-Verwaltung: Beschreibung + DL link zur FW. 
+
+FF-NRLP:
+ Zielkonflikt : Regionale identitat vs Infrastruktur teilen
+Eigene Landingpage ist mindest anforderung an eigene "Sub-Community"
+Wie haben andere Meta-Communities das gelöst?
+Ist es möglich die SSID + Landing-Page während des Config-Wizzard zu setzen (vgl. Koodinaten)
+-> Florian fragen
+
+Bericht: Freifunk MYK in Virneburg
+Niklas und Ansgar waren am Sonntag in Virneburg und haben mit Christoph den Ort begangen und Anbringungspunkte für Router gespottet
+Mehr dazu in einem separaten Pad: https://pad.freifunk-myk.de/p/ffmyk-virneburg
+
+Vereinsgründung
+Robert hat sich mit den Erfordernissen für die Gründung eines gemeinnützigen eingetragenen Vereins beschäftigt
+Zusammenfassend bietet die Gründung eines Vereins für uns folgende Vorteile
+Zusammenarbeit mit Kommunen
+Verwalten von Spenden, bei Gemeinnützigkeit steuerliche absetzbarkeit von Spenden 
+Betrieb von Servern und VPN-Tunneln als Verein anstatt als haftbare Einzelpersonen
+Die Vereinsgründung erfordert
+Aufstellung einer Vereinssatzung
+140 Euro Verwaltungsgebühr
+sieben Gründungsmitglieder
+Wahl von Vorsitzender/m und SchatzmeisterIn
+jährliche Kassenprüfung
+jährliche Steuererklärung
+
+Ablauf Projektarbeiten:
+Begehung mit   
+
+Zusammenfassung auf der Mailinglist von Sebastian
+
+Links
+
+http://www.picopeer.net/PPA-de.shtml
+http://doodle.com/poll/a8677yzi3iqf9atm
+
+{{tag>Protokoll}}

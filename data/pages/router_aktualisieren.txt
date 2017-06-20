@@ -1,0 +1,47 @@
+====== Router aktualisieren ======
+
+Wie bei den meisten Geräten sollten auch Freifunk-Router regelmäßig aktualisiert werden. Neue Versionen können Sicherheitslücken schließen, Funktionen nachrüsten oder verbesserte Konfigurationen beinhalten. Wird ein Router lange Zeit nicht aktualisiert kann es passieren, dass er sich nicht mehr mit aktuelleren Nachbarknoten oder unseren Servern verbinden kann. Änderungen, welche solche Unterbrechungen auslösen können, werden frühzeitig auf unserer Mailingliste bekanntgegeben.
+
+<WRAP center round tip 60%>
+Einige Updates können das Meshing unterbrechen. Es empfiehlt sich zuerst die Router zu aktualisieren, welche am weitesten entfernt sind.
+</WRAP>
+
+
+Die Firmware wird wie bei der Installation ausgewählt, jedoch sollten die Dateien des Ordners "sysupgrade" verwendet werden.
+
+{{youtube>Y4grBalBeA8?medium}}
+
+===== Methode 1: Config-Mode =====
+
+Für einzelne Geräte, welche direkt zugänglich sind, ist der Config-Mode die einfachste Lösung. Hierzu muss - wie oben beschrieben - bei den meisten Routern der Reset-Knopf gedrückt gehalten werden bis die LEDs aufleuchten. Im Anschluss muss der PC oder Laptop mit einem Netzwerkkabel an die LAN-Buchsen des Routers (bei TP-Link üblicherweise Gelb) angeschlossen werden. Der Router ist im Anschluss unter der Adresse http://192.168.1.1/ erreichbar.
+
+Im Config-Mode findet sich oben rechts der "Expertenmodus", hier kann unter "Firmware aktualisieren" die neue Firmwaredatei auf den Router übertragen und installiert werden.
+
+===== Methode 2: Fernwartung per SSH/SCP =====
+
+Ist der Router nicht direkt zugänglich kann das Update auch per Fernwartung installiert werden. Hierzu muss auf dem Router ein Kennwort oder ein SSH-Schlüssel hinterlegt worden sein. Weiterhin muss sich der PC/Laptop, welcher das Update durchführen soll, im Freifunk-Netz befinden.
+
+Im ersten Schritt muss die IP des Routers ermittelt werden. Am einfachsten funktioniert dies über [[http://map.freifunk-myk.de/|unsere Karte]] - in den Details des Routers wird die IPv6-Adresse mit angezeigt.
+
+Nun wird die Firmware in den Arbeitsspeicher des Routers übertragen. Unter Linux und Mac geht dies auf der Konsole mit folgendem Befehl:
+
+<code>scp {Dateiname} root@[{IPv6}]:/tmp/</code>
+
+heißt die Firmware-Datei z.B. "gluon-ffmyk-2016.1-testbuild-20160214-tp-link-tl-wr841n-nd-v9-sysupgrade.bin" und die IP des Routers lautet "2a01::1:2:3" so ist der Befehl:
+
+<code>scp gluon-ffmyk-2016.1-testbuild-20160214-tp-link-tl-wr841n-nd-v9-sysupgrade.bin root@[2a01::1:2:3]:/tmp/</code>
+
+Wichtig ist es die IPv6-Adresse in eckigen Klammern anzugeben.
+
+{{ :wiki:winscp-ff.png?200|}}Unter Windows kann die Software [[https://winscp.net/|WinSCP]] verwendet werden. Als Hostname wird die IPv6-Adresse angegeben, der Benutzername lautet "root". Um eine Verbindung herstellen zu können muss zudem das Protokoll von "SFTP" auf "SCP" geändert werden. Nach dem Verbinden ist auf der rechten Seite der Ordner /tmp aufzurufen. Dateien können per "Drag-and-Drop" übertragen werden.
+
+Zuletzt muss das eigentliche Update gestartet werden. Unter Linux und Mac wird hierzu eine SSH-Verbindung mit folgendem Befehl aufgebaut:
+
+<code>ssh root@2a01::1:2:3</code>
+
+unter Windows kann die Software [[http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html|PuTTY]] verwendet werden. Hier ist nur die IP einzutragen, der Benutzername wird im Anschluss abgefragt.
+
+Auf der Konsole des Routers wird erst in /tmp gewechselt und dort das Update gestartet:
+
+<code>cd /tmp
+sysupgrade gluon-ffmyk-2016.1-testbuild-20160214-tp-link-tl-wr841n-nd-v9-sysupgrade.bin</code>

@@ -1,0 +1,18 @@
+====== Priorisierung bei FRITZ!Box ändern ======
+
+Durch eine Priorisierung des Datenverkehrs lässt sich das Ziel erreichen, dass Freifunk den persönlichen Gebrauch eines Internetanschlusses nicht beeinträchtigt. Da hiebei die Ressourcenzuteilung nach Bedarf erfolgt ist diese Methode dem Bandbreitenlimit der Freifunk-Router vorzuziehen. Es wird vorausgesetzt, dass der Freifunk-Router bereits vollständig eingerichtet und mit der FRITZ!Box verbunden ist.
+
+Die Einrichtung erfolgt in dieser Anleitung über eine Gerätezuordnung, alternativ kann ein geräteunabhängiger Protokollfilter für udp/10000 erstellt werden.
+
+Alle Anleitungen beziehen sich auf die Firmware Stand Dezember 2016, sollte Ihr Anbieter eine ältere oder neuere Version einsetzen kann die Menüführung geringfügig abweichen. Bei Fragen einfach auf der Mailingliste melden.
+
+  - Öffnen Sie das Webinterface Ihres Routers (meist [[http://fritz.box|http://fritz.box]])
+  - Melden Sie sich mit Ihrem Kennwort an
+  - Klicken Sie auf Internet -> Filter -> Priorisierung
+    * {{:wiki:fb-prio01.png?200|}}
+  - Klicken Sie im Bereich "Hintergrundanwendungen" am Ende der Seite auf "Neue Regel"
+  - Wählen Sie im oberen Feld den Freifunk-Router aus
+    * {{:wiki:fb-prio02.png?200|}}
+  - Bestätigen Sie mit OK
+
+{{youtube>Z3C2Trjo0Ck?medium}}

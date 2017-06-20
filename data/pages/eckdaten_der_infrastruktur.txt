@@ -1,0 +1,27 @@
+IPv4: 10.222.0.0/16
+
+IPv4 DHCP Fastd1: 10.222.100.0/24
+
+IPv6: ????
+
+AS: 65522
+
+
+SSID: freifunk-myk.de
+
+2.4GHz:
+mesh_ssid = '02:FF:4D:59:4B:40' (4D=M,59=Y,4B=K - 4=2.4GHz)
+mesh_bssid = '02:FF:4D:59:4B:41' (4D=M,59=Y,4B=K - 4=2.4GHz)
+
+5GHz:
+mesh_ssid = '02:FF:4D:59:4B:50' (4D=M,59=Y,4B=K - 5=5GHz)
+mesh_bssid = '02:FF:4D:59:4B:51' (4D=M,59=Y,4B=K - 5=5GHz)
+
+Alle Kanäle 20MHz - 40MHz ist meist langsamer da laut Protokoll nur erlaubt wenn Nachbarkanal frei ist - und das ist selten der Fall.
+
+Anycast:
+ip4 = '10.222.0.254'
+ip6 = '???::FFFE'
+mac = '02:FF:4D:59:4B:FF' (4D=M,59=Y,4B=K)
+
+VPN: fastd, salsa2012+umac, mtu=1426, max 2 peers

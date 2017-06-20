@@ -1,0 +1,55 @@
+====== Treffen 2016-05-03 ======
+
+  * Anwesende: Ansgar, Florian, Niklas, Karsten, Patrick, Sebastian, Stephan, Torsten, Patrik, Björn, Elias, Sören, Christoph, Axel
+  * Protokoll: Sebastian
+
+====== Themen: ======
+  * Begrüßung
+  * Verbesserung der Werbewirksamkeit
+    * Mehr Berichte
+      * Für Oberwesel wird noch was erstellt
+  * Oberwesel Kurzbericht
+    * Viel Touristik
+    * 3 Infoveranstaltungen durch Gewerbeverein
+      * 40-50 Personen
+    * jetzt auch Tourismusverein, Bürgermeister
+    * Router durch Spende Bank, Router werden gekauft und verteilt
+    * Erste CPEs werden installiert
+    * Fußgängerzone soll versorgt werden
+    * DTAG/Vodafone war zu kompliziert
+    * Nächster Monat weiteres Treffen geplant
+    * Folien werden aktuell erstellt, Material wird dann bereitgestellt
+    * Plakataktion
+    * "Router as a service"
+  * Bad Neuenahr Ahrweiler Kurzbericht
+    * ~60 Router
+    * Probleme mit Offloader -> ML
+    * Stadt will evtl. Router kaufen & Verschenken, Stadtmarketing
+    * Tag der offenen Tür in Bad Neuenahr Ahrweiler 20.05.2016
+    * Exitpoints und Offloader müssen noch eingerichtet werden.
+  * KOBLENZ
+    * viele Cafes verwenden Freefii
+    * Touristenzentrum ist nicht im bilde!
+  * Studenten sind wach und machen ihre Sitzung
+  * Launch neue Webseite
+    * Arbeitsverteilung
+      * Authoren für den Blog
+  * Backend VM (Fertiges Image um neue fastds aufzusetzen)
+    * Aktuell zu wenig nutzen
+  * Anfrage Gemeinde-⁠ und Städtebund Rheinland-⁠Pfalz
+  * Anfragen ML/Twitter/…
+  * Probleme Netwerk / Routing / foo
+  * Erinnerungsmail
+
+====== Todo ======
+  * Ansgar schaut sich das Plugin zur SSID noch einmal an.
+  * Notizen AW:
+    * Funktion Tunneling
+  * Dokumentensammlung
+  * FAQ
+
+  * https://www.ffmyk.de/node/keys
+
+  * Lustiges am rande: http://www.golem.de/news/qantas-explosives-wlan-verzoegert-flug-fuer-mehrere-stunden-1605-120702.html
+
+{{tag>Protokoll}}

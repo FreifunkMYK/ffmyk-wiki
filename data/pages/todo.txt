@@ -1,0 +1,14 @@
+**Webseite:**
+  * map diagrams broken
+  * https?
+  * Vorlagen anlegen
+  * Mobiles Design
+
+
+  * Documensomething
+
+**Notes**
+  * DNS/DHCP in Node Register
+  * DNS-Service-Fix (can we add domains @ all-inkl?)
+  * Watchdogs/monitoring/…
+  * GPS-GUI Node-Wizzard

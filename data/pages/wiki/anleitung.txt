@@ -1,0 +1,28 @@
+====== Anleitungen ======
+
+===== Wichtiger Hinweis =====
+{{:wiki:update.jpg?100 |}}
+Bitte verwendet die Version **2016.1.3 oder neuer**. Vorhandene Freifunk Router sollten bitte aktualisiert werden. Eine Anleitung findet Ihr hier weiter unten. Router, welche vor **März 2016** Installiert wurden werden ohne Update ab **Februar 2017** keine Verbindung mehr erhalten können!
+
+
+===== Grundlagen =====
+
+  *   [[:router_einrichten|Freifunk-Software auf Router installieren]]
+  *   [[:router_aktualisieren|Freifunk-Router aktualisieren]]
+  *   [[:aendern_der_daten_im_router|Ändern der Daten im Router]]
+
+
+===== Advanced =====
+
+  *   [[:router_reparieren|Router reparieren]]
+  *   [[:offloader|Mehr Bandbreite: Offloader bauen]]
+  * [[:freifunk-router_an_fritzbox_gastzugang| Freifunk an FRITZ!Box Gastzugang]]
+  *   [[:fritzbox_priorisierung|Fritzbox Priorisierung: Heimnetz bevorzugen]]
+  *   [[:vlan_tagging|VLAN-Tagging]]
+
+
+===== Ich komme mit der Anleitung hier nicht zurecht - Was nun? =====
+
+Da gibt es Hilfe von uns! Du kannst ganz einfach Kontakt zu uns aufnehmen. 
+Sende uns einfach eine Mail mit deinen Fragen an info@freifunk-myk.de oder trage dich in unsere Mailingliste ein. Deine Fragen werden dann an alle angemeldeten Freifunker aus unsere Community weitergeleitet.\\
+Natürlich kannst du auch eines unserer regelmäßigen Treffen besuchen. Wir helfen dir dort gerne deinen Router zu installieren.\\

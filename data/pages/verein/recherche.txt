@@ -1,0 +1,98 @@
+====== Hintergrund ======
+Beim [[https://pad.freifunk.net/p/ffmyk-20151124|Treffen am 24.11.15]] kam erneut der Wunsch auf, FF-MYK+Umgebung eine juristische Person in den Rücken zu stellen. Üblicherweise wird dafür die Form des "Gemeinnützigen eingetragenen Vereins" gewählt.  rfelten sich angeboten, den Aufwand + Ablauf bzgl. Vereinsgründung zu Recherchieren. **Die Recherche ist noch NICHT abgeschlossen!**
+
+====== Recherche Ergebnis ======
+Achtung: Diese Zusammenfassung ist möglicherweise nicht vollständig und/oder irreführend ;)
+===== Allgemeines =====
+Pro:
+  * Vorstand und Mitglieder haften nicht persönlich für Verbindlichkeiten des e.V.  Er kann im eigenen Namen klagen und verklagt werden
+  * demokratische  Organisationform mit gleichen Rechten und Pflichten aller Mitglieder
+  * keine wirtschaftlichen Zwecke (gewerbliche oder Erwerbszwecke) verfolgbar
+  * Gemeinnützigkeit (BGB:  "nicht wirtschaftlichen Verein" oder "Idealverein") erleichtert Steuer-foo + erlaubt Zuwendungsbestätigungen auszustellen (Wichtig für Firmen die Spenden wollen!) Gibt Mustersatzung der Finanzverwaltung
+
+Con:
+  * 7 Gründungsmitglieder + Satzung + Verschiedene Behördengänge notwendig (zur Gründung)
+  * Regelmäßiger Papierkrams mit Steuern, Versammlungen etc. Neuanmeldung notwending, wenn Satzung oder Vorstand wechselt
+  * Genauere Bücher ("erweiterte Buchführungspflichten") bei Gemeinnüzigkeit erforderlich zB Mittelwervendung, Beschränkungen bei Zuwendungen an Mitglieder ;) + Vermögensbindung bei Auflösung des Vereins. Späterer Verzicht auf die Gemeinnützigkeit ist nicht möglich. Falls FA Gemeinnützigkeit aberkennt, werden rückwirkend Steuern etc fällig und pers. Haftung Vorstandsmitglieder
+  * Rechts- und Steuerfragen, können kompliziert werden. Vereinshaftpflichtversicherung sinnvoll
+
+Unterschied "nicht eingetragener Verein":
+  * sog. Handelndenhaftung, d.h. derjenige, der für den Verein Rechtsgeschäfte abschließt, also in der Regel der Vorstand, haftet persönlich
+===== Was ist ein Verrein =====
+"Ein Verein ist ein freiwilliger Zusammenschluss mehrerer Personen, der
+  * auf eine gewisse Dauer angelegt ist,
+  * einen gemeinsamen Zweck verfolgt,
+  * einen eigenen Namen hat,
+  * durch einen Vorstand handelt und
+  * unabhängig vom Wechsel seiner Mitglieder besteht."
+[[https://broschueren.nordrheinwestfalendirekt.de/broschuerenservice/justizministerium/der-verein/21|Quelle]]
+
+===== Ablauf Gründung =====
+  * Satzung erarbeiten -> Entwurf siehe [[Verein:Satzung]]
+  * Entwurf Geschäftsordnung erstellen 
+  * Namen festlegen: Nicht irreführend, Deutlich unterscheiden von anderen Vereinen im Registerbezirk. Eintragung ist kein Namensschutz. [[https://register.dpma.de/DPMAregister/marke/einsteiger|Namen/Markenrecherche]] durchführen sinnvoll
+  * Gemeinnützigkeit gewünscht? //Vor//  Gründung bzw. Eintragung bei FA prüfen der "Bestimmungen der Vergabenordnung für gemeinnützige Vereine"-> Welches FA ist zuständig?
+  * Gründungsversammling einberufen
+  * Vorstand wählen, mehrere Personen sinnvoll (redundanz) aber nicht zwingend notwening. 2-5 Personen sinnvoll
+  * Satzung muss vorliegen + ggf. weitere Vereinsordnungen und von Gründungsmitgliedern unterschrieben werden (siehe "Satzungsregelungen"). Protokoll erstellen + unterschreiben
+  * Unterschrift(en) des Vorstands werden von einem Notar beglaubig
+  * Notar meldet Gründung bei örtlich zuständigen Amtsgericht (Registergericht) an. Original Satzung+Protokoll nötig. Anmeldeschreiben (bei Notar) vom Vorstand unterschreiben + einreichen -> Notar suchen
+  * Registerauszug geht an Postadresse 
+  * Mit Registerauszug Bankkonto anmelden
+  * Mit Registerauszug bei FA melden
+
+Gründungsprotokoll erstellen mit://Ort und Tag, Protokollführer und Versammlungsleiter, Wahlergebnissen und gefassten Beschlüssen, Name, Anschrift, Beruf der gewählten Vorstandsmitglieder, Unterschrift des Protokollführers und 1. Vorsitzenden//
+
+===== Satzung =====
+Laut Gesetz muss die Satzung eines Vereins folgendes enthalten: //Vereinsname, Vereinssitz (Ort), Regelung zur Eintragung des Vereins, Vereinszweck, Ein - und Austritt von Mitgliedern, Mitgliedsbeiträge, Beurkundung von Beschlüssen der Mitgliederversammlung (Protokollierung), Bildung des Vorstandes, Regelungen zur Einberufung der Mitgliederversammlung (Form und Frist)//
+  *  TW. geht Zeugs nur über Eintragung/Änderung der Satzung z.b. die Festlegung verschiedener  itgliedergruppen wie z.B. Fördermitglieder, Ehrenmitglieder, Sonderrechte für Mitglieder,
+  * Soll der Vorstand eine Tätigkeitsvergütung  erhalten, muss die Satzung diese Vergütung ausdrücklich gestatten. Auch bei "Ehrenamtspauschale" Aufwendungen wie Spesen, Reisekosten etc. auch ohne Satzung (laut Gesetz) erstattbar
+  * Dringlichkeits - oder Initiativanträge (Anträge, die erst nach der Versendung der Einladung oder in der Mitgliederversammlung gestellt werden) sollten lt. Satzung zugelassen werden + Klausel ausdrücklich Beschlussfassung über diese Anträge zulässig 
+  * Aus Haftungsgründen: In Satzung die Zuständigkeiten der Vorstandsmitglieder regeln ("Ressortbildung"), ODER  Vorstand per Satzung zu gestatten, sich eine Geschäftsordnung zu geben, in der die Aufgaben der einzelnen Vorstandsmitglieder geregelt werden <- besser, da bei Änderung keine Änderung der Satzung erforderlich (= keine Änderung beim Gericht)
+  * Vorstand sollte auch nach Ablauf seiner Amtszeit im Amt bleiben -  sonst bei verspäteten Vorstandswahlen kein Vorstand vorhanden ;)
+  * "Aus Sicht des Vorstands ist es sinnvoll, in der Satzung zu regeln, dass der Vorstand nur bei Vorliegen von grober Fahrlässigkeit haftet" <- ist vermutlich durchs BGB schon abgedeckt -> vgl BGB § 31a
+  * Satzung kann die Befugnisse der Mitgliederversammlung einschränken zB  Regelung, dass der Vorstand von einem anderen Gremium bestellt wird oder sich selbst ergänzt
+  * Satzung muss Form und Frist die Einladung zur Mitgliederverersammlung regeln. Sinnvoll: nicht per Post einladen ;). Bis zu 3 alternative Formen der Einladung mögl. zb. Email / Website / ML
+  * Problem: Wenn ein Mitglied behauptet, es habe die Einladung nicht erhalten und fechtet aus diesem Grund Beschlüsse an 
+  * BGB § 30: "besondere Vertreter" ?
+
+===== Mitgliederversammlung =====
+  * Dient "Willensbildung" :D
+  * Inhalte: Wahl des Vorstandes, Satzungsänderungen, Entlastung des Vorstandes. "umfängliche Auskunftsrechte gegenüber dem Vorstand"
+
+
+====== Offene Punkte =====
+  * Welches Amt wird/kann/will von wem bekleidet werden? Vertretungsberechtigungen?
+  * Finanzierung & Laufende Kosten?
+  * Mitgliedergruppen?
+  * Postadresse Verein? -> Dokumentenscanner ;)
+  * Interne Kommunikation & Datenaustausch: Wie? (ML, Owncloud, ...)
+  * ...
+  * 
+====== Recherche Verein Allg. ======
+Google spuckt natürlich massig Zeug aus. Hier paar brauchbare die als Grundlage für die o.g. Inhalte dienten:
+
+  * http://www.vereinsknowhow.de/kurzinfos/leitfaden.htm - Übersicht über den Ablauf der Gründung
+  * http://deutsches-ehrenamt.de/download/DE-Leitfaden-Gruendung.pdf <- 12 Seiten gute Infos! Achtung: Wollen dir ne Versicherung verkaufen.
+  * http://www.mjv.rlp.de/binarywriterservlet?imgUid=915883f4-66d0-4596-ae85-40d5187fa062&uBasVariant=11111111-1111-1111-1111-111111111111 -21 Seiten pdf gute Infos! Wollen keine Versicherung verkaufen ;)
+  * https://finanzamt-trier.fin-rlp.de/fileadmin/user_upload/Finanzaemter/FA%20Trier/informationen/Vereine2009.pdf - P48 Seiten PPT (als PDF) als Zusammenfassung
+  * http://www.dirtfoundation.com/files/DIMB_Merkblatt_Vereinsgruendung_080323.pdf - Ablauf mit Beispiel dokumenten
+  * http://www.akademie.de/wissen/e-v-leitfaden-verein-gruenden - Übersicht Rechtsform Verein
+  * http://www.gesetze-im-internet.de/bgb/BJNR001950896.html#BJNR001950896BJNG000602377 - BGB §21-§53
+  * https://www.justiz.bayern.de/imperia/md/content/stmj_internet/gerichte/amtsgerichte/augsburg/reggmustersatzung_gemeinn_tziger_verein.pdf Mustersatzung (3 Seiten) aus Bayern
+
+
+Aufgaben & Aufwand der einzelnen Organe - Aufgaben werden in Satzung / bzw. Geschäftsordnung definiert!
+
+Pflicht:
+  * Vorstand: Der Vorstand leitet den Verein und vertritt ihn  nach außen (Geschäftsführung und Vertretung) -> Ansprechpartner Presse usw ? Gibt " BGB-Vorstand" und "erweiterter(Gesamt-) Vorstand" -> nur erstere steht im Vereinsregister und haben keine "Vertretungsberechtigung" ?, ansonsten kein Unterschied 
+
+Optional: (macht u.U. keinen Sinn ;)
+  * Kassenwart/Kassenprüfer, Geschäftsführer, Beirat
+  * ...
+
+====== Recherche andere FF. Vereine ======
+Es ist natürlich naheliegend, wie andere (FF)Vereine sich gegründet haben. GGf per Mail anschreiben + Erfahrungen erfragen?
+
+
+{{tag>Verein}}

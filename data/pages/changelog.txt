@@ -1,0 +1,10 @@
+====== Changelog ======
+Hier findest du Zeitlich geordnet die Änderungen die im gange sind. Meist einfach ein Startflag mit Verweisen auf das Hauptthema.
+
+{{pagequery>@changelog *;
+sort=cyear,cdate,name;
+col=2;
+snippet=tooltip;
+proper=name;
+display={cdate} - {name}; 
+group;}}

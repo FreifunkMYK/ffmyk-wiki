@@ -1,0 +1,10 @@
+====== Wiki ======
+Hier findest du eine Übersicht über unsere Wikieinträge.
+
+{{pagequery>@wiki *;
+sort=cyear,cdate,name;
+col=2;
+snippet=tooltip;
+proper=name;
+display={cdate} - {name}; 
+group;}}

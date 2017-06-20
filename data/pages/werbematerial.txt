@@ -1,0 +1,6 @@
+  * Flyer: https://github.com/FreifunkMYK/flyer-ffmyk
+  * Logo/Aufkleber: https://github.com/FreifunkMYK/flyer-ffmyk/blob/master/Bilder/Logo.svg
+
+  * Flyer-Vorlage für Einrichtungen/Betriebe/Firmen: http://wiki.freifunk-myk.de/_media/flyer-ffmyk-clean.odt
+
+  * PR-Generator VFN-NRW: http://prgenerator.vfn-nrw.de/ (Tischaufsteller, Nachbarschaftsbrief)

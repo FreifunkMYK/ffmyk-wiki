@@ -1,0 +1,48 @@
+====== Treffen 2016-06-07 ======
+
+  * Anwesende: Ansgar, Florian, Björn, Torsten, Sebastian, Christoph, Robert
+  * Protokolant: Robert
+
+  * Praxis
+    * CPE mitbringen um Funnkstrecke zu verbessern
+    * 841-Unbrick via TFTP/Serial (siehe ML)
+  * Info-Block
+    * http://www.golem.de/news/lede-project-openwrt-kernentwickler-starten-eigenen-fork-1605-120726.html
+    * Amateurfunk-Freunde Koblenz brauchen Internetzugang in der Von-Kuhl-Str. 51
+    * Neue Firmware
+    * Kurzbericht Störerhaftung
+    * (Kann ggf. wer von den letzten Veranstaltungen wie spectaculum/Infostand Oberwesel & TDOT AW berichten?)
+  * Technisches / Organisatorisches
+    * Kartenzeugs (Proxy, API-Zeugs, etc)
+    * gitter.im
+    * Fastd-Stats (grafana)
+    * Traffic ausleiten via Freifunk Rheinland
+    * Ehrenamtstag Mayen
+    * Moderation ML
+    * Status Website
+    * Reverse Shell
+    * Kanal 1 zu voll? Wechseln?
+
+====== Protokoll ======
+
+  * CPE: Klappt nur bedingt, Verbindet anscheinend nicht zum Router im OG :/
+  * LEDE Project wird verfolgt, jedoch basiert FF MYK auf Gluon und es ist abzuwarten was Gluon macht. Wechsel auf LEDE ist wohl für "einen der nächsten" geplant
+  * Amaterufunker bauen Hackerspace (incl. (reperaturbedürftigen)14m Antennenmast im Garten ;) auf. https://goo.gl/maps/Une61wQqNa22. Problem: kein Internet. RiFu? Dach ist niedrig. Ansgar macht ein 360° Panorma. Antennen werden gerne aufgehangen ;)
+  * Neue Stable is raus! 
+  * Störerhafung: Freifunk noch nicht obsolet (laut c't)
+  * Björn berichtet über den Freifunk Stand auf dem Oberweseler Stadtfest - Bericht für FF-MYK mit Details folgt. Gewebeverein + Touristikinformation pushen das. Konfig der Router läuft über ein Fomular (in Print, wieviel Bandbreite, etc). FF Typ conft dann Router und verteilt.
+  * Christoph: Tabea Rösner war wahlkampfbedingt  in Virneburg um sich "Freifunk auf dem flachen Land macht".
+
+  * Technisches;
+    * Karten API zZ verteilt. Kartenmann nicht da heute. Christoph wünscht sich ein anderes default Map (Tile) Backend
+    * Gitter.im als Support nutzbar? -> Neben ML noch weiterer Kanal eher ungewünscht; gitter.im bei Zielgruppe eher nicht bekannt (im vgl. zu Mail)
+    * Fastd-Status: OVHs laufen aus, Scalebale angemietet, aber noch nix drauf. Flo wünscht sich Trafficstats auch für andere Server als fastd1.
+    * Freifunk Rheinland: Geht das technisch? -> Vor/Nachteile/Umsetzung müsste ggf. noch genauer betrachtet werden. Thema zZ nicht akut.
+    * Ehrenamtstag: Chrisoph ist dabei und sucht Mitstreiter + antwortet auf Mail. Ist der Ehramtstag von ganz RLP (!). Es gibt keine Fyler mehr! Und auch Sticker! (UV fest).
+    * ML: Mehr Moderatoren nötig, auf beiden MLs!. Normale ML: Torsten & Björn melden sich freiwillig (thx), Bestand: Sebastian/Florian. Tech-ML: Björn. Robert: jede ML sollte 2 Admins haben + 2 Mods (jetzt der Fall). Termin-Erinnerungsfunktion: geht fast (tm)
+    * Reverse Shell zur Fernwartung von non-FF 5GHz Links? Flo: Nicht notwendig, da man sich oer IPv6 auf die FF box dahinter connecten kann und dann zurück (in die Range des uplinks)
+    * Flo: Kanal1 wird nur von einer Seite gestört. Viele Geräte default 6 (z.b. Vodafone); Fritzbox dynamisch.
+    * Status Website: Funktionalität großteils fertig, unklar: Router Liste, Blog Import.
+    * Fyler: Fensteraufkleber ("Hier Freifunk") sind gewünscht (Christoph). Größe: ca DinA7 oder DinA6. Björn sucht Vorlagen von Oberwesel raus + Quelle für Druck(?)
+
+{{tag>Protokoll}}

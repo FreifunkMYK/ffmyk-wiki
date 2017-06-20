@@ -1,0 +1,13 @@
+====== Unterstütze Geräte ======
+Die derzeitige Firmware basiert auf [[http://gluon.readthedocs.org/en/latest/index.html|Gluon]], einem Framework für Mesh-Knoten.
+
+====Unterstützte Geräte====
+
+Eine Liste der unterstützten Geräte ist [[http://wiki.freifunk.net/Freifunk_Firmware_Gluon/Hardware|auf freifunk.net]] einsehbar.
+
+====Downlad===
+Zur Zeit befinden wir uns noch in der Testphase und können keine voll funktionsfähigen Images anbieten. Einige Testbuilds lassen sich [[http://adlerweb.info/files/freifunk/experimental/|im Entwicklungsordner]] finden.
+
+
+
+{{tag>Unsortiert}}
