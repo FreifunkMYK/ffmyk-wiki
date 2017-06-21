@@ -2,7 +2,4 @@
   * [[wiki:mitmachen|Mitmachen]]
   * [[wiki:anleitung|Anleitungen]]
   * [[wiki:faq|Deine Fragen und Antworten (FAQ)]]
-  * [[blog|Blog]]
-  * [[http://status.freifunk-myk.de/|Karte]]
-  * [[http://www.freifunk-karte.de/|Karte global]]
   * [[changelog|Changelog]]
